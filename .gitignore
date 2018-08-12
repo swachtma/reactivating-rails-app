@@ -1,0 +1,50 @@
+/.c9
+/.cache
+/.gem
+/.gnupg
+/.local
+/.nano
+/.node-gyp
+/.qws
+/.ssh
+/.npm
+
+# Ignore all logfiles and tempfiles.
+/api/log/*
+/api/tmp/*
+/api/!/log/.keep
+/api/!/tmp/.keep
+/api/.byebug_history
+# Ignore encrypted secrets key file.
+/api/config/secrets.yml.key
+
+.bash_history
+.bashrc
+.cloud-locale-test.skip
+.profile
+.pry_history
+.viminfo
+.wget-hsts
+
+# dependencies
+/client/node_modules
+
+# testing
+/client/coverage
+
+# production
+/client/build
+
+# Jest cache
+client/jest_0/
+
+# misc
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*

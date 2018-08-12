@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  api:
+    build: 
+      context: .
+      dockerfile: ApiDockerfile
+    container_name: api
+    ports: 
+      - 3000:3000
+    volumes:
+    - ./api:/root/api
+    - gems:/usr/local/bundle
+    depends_on:
+      - pgdb
+    command: ["rails","server"]
+  client:
+    build:
+      context: .
+      dockerfile: ClientDockerfile
+    container_name: client
+    ports:
+      - 80:3000
+      - 35729:35729
+    volumes:
+      - ./client:/root/client
+    command: ["yarn","start"]
+  pgdb:
+    image: postgres:10-alpine
+    container_name: pgdb
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: secretword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  gems:
+  node_modules:
+  pgdata:
