@@ -9,6 +9,8 @@
 /.ssh
 /.npm
 
+#ignore chapter files
+/api/lib/reactivating-rails
 # Ignore all logfiles and tempfiles.
 /api/log/*
 /api/tmp/*
