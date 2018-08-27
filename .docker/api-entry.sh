@@ -6,8 +6,8 @@ echo "===== BEGINNING API SETUP ====="
 # Ensures all users start with the same cached version of CRA/react-scripts
 if [ -z "$(ls -A /root/api)" ]; then
   echo "===== DIRECTORY /api NOT FOUND, COPYING PROJECT STARTER ====="
-  rm /app_lock/rr_api/README.md # Remove README to avoid multiples in project
   cp -r /app_lock/rr_api/* /root/api # Clone project to api bind volume
+  rm /root/api/README.md # Remove README to avoid multiples in project
 fi
 
 # Change to rails project directory
@@ -33,4 +33,3 @@ cd /root/api
 
 # Finally call command issued to the docker service
 exec "$@"
-
