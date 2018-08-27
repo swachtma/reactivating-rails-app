@@ -4,7 +4,7 @@ FROM ruby:2.5.1
 RUN apt-get update && \
 apt-get install -y cmake && \
 gem install rails -v 5.2.0 && \
-rails new /app_lock/rr_api --api --database=postgresql --skip-bundle --skip-git
+rails new /app_lock/rr_api --api -T --database=postgresql --skip-bundle --skip-git
 
 # Overwrite stored database config with docker settings 
 COPY ./.docker/init_database.yml /app_lock/rr_api/config/database.yml
