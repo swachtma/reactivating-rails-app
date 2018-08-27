@@ -14,6 +14,7 @@ WORKDIR /root/api
 
 # Copy startup script to container root and set as entrypoint
 COPY ./.docker/api-entry.sh /api-entry.sh
+RUN chmod +x /api-entry.sh
 ENTRYPOINT [ "/api-entry.sh" ]
 
 CMD ["bash"]

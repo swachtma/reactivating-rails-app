@@ -13,6 +13,7 @@ WORKDIR /root/client
 
 # Copy startup script to container root and set as entrypoint
 COPY ./.docker/client-entry.sh /client-entry.sh
+RUN chmod +x /client-entry.sh
 ENTRYPOINT [ "/client-entry.sh" ]
 
 CMD ["bash"]
