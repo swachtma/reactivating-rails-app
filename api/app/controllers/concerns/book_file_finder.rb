@@ -3,7 +3,7 @@ class BookFileFinder
   
   def initialize(path)
      @path = normalize_folder(path) 
-     @entries = locate_chapter_files.sort!
+     @entries = locate_chapter_files.sort_by! {|x| File.basename(x,".md").to_i}
   end
   
   private
