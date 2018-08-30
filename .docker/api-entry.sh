@@ -30,6 +30,7 @@ rails db:migrate
 
 # Change to api root so bash start containers in application root on CMD override
 cd /root/api
+rm -f tmp/pids/* || true # Remove existing server process ID files
 
 # Finally call command issued to the docker service
 exec "$@"
