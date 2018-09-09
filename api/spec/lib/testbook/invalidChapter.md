@@ -1,0 +1,1 @@
+Chapter.invalid? should return true when evaluating this file as it contains no valid heading to serve as a chapter title.
