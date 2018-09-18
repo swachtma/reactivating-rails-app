@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nodes actionCreators loadNodes(node) 1`] = `
+Object {
+  "payload": Array [
+    Object {
+      "contents": "Test node",
+    },
+  ],
+  "type": "LOAD_NODES",
+}
+`;

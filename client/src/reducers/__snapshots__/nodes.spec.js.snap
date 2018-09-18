@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nodes Reducer nodesSort orders by chapter id and then node id 1`] = `
+Array [
+  Object {
+    "chapter_id": 1,
+    "content": "First",
+    "id": 6,
+    "node_type": "paragraph",
+  },
+  Object {
+    "chapter_id": 1,
+    "content": "Second",
+    "id": 7,
+    "node_type": "paragraph",
+  },
+  Object {
+    "chapter_id": 2,
+    "content": "Third",
+    "id": 3,
+    "node_type": "paragraph",
+  },
+  Object {
+    "chapter_id": 2,
+    "content": "Fourth",
+    "id": 4,
+    "node_type": "paragraph",
+  },
+]
+`;

@@ -1,40 +1,55 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { loadNodes } from './actions/nodes';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      book_body: ["Loading, please wait..."]
-    };
-  }
+const mapStateToProps = (state) => ({
+  book_body: state.nodes
+});
 
+const mapDispatchToProps = (dispatch) => ({
+  dispatchLoadNodes: (payload) => dispatch(loadNodes(payload))
+});
+
+class App extends Component {
   componentWillMount(){
-    axios.get("/api/book").then(response =>
-      this.setState(
-        prevState => ({book_body: response.data.payload})
-      )
-    ).catch(error => console.log(error));
+    axios.get("/api/nodes")
+    .then(
+      (response) => {
+        this.props.dispatchLoadNodes(response.data);
+      }
+    )
+    .catch(
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
-  renderContentBlocks = (content) => 
-    content.map((block,i) => <p key={i}>{block}</p>);
-
+  renderContentBlocks = (content) => {
+    let content_blocks = [];
+    content.forEach((block) => {content_blocks.push(<p key={content_blocks.length}>{block.content}</p>)});
+    return content_blocks;
+  }
+  
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Reactivating Rails: A work in progress</h2>
         </div>
         <div className="App-intro">
-          { this.renderContentBlocks(this.state.book_body) }
+          { this.renderContentBlocks(this.props.book_body) }
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
