@@ -19,6 +19,7 @@
 /api/.byebug_history
 # Ignore encrypted secrets key file.
 /api/config/secrets.yml.key
+/api/public/images/*
 
 .bash_history
 .bashrc
