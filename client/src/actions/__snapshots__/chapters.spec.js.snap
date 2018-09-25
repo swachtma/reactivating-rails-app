@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chapters actionCreators loadChapters(chapters) 1`] = `
+Object {
+  "payload": Array [
+    Object {
+      "contents": "chapter",
+    },
+  ],
+  "type": "LOAD_CHAPTERS",
+}
+`;

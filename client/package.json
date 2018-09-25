@@ -5,11 +5,13 @@
   "proxy": "http://api:3000",
   "dependencies": {
     "axios": "0.18.0",
+    "markdown-it": "^8.4.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
     "start": "react-scripts start",

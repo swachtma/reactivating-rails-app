@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chapters Reducer sortChapters orders by id 1`] = `
+Array [
+  Object {
+    "id": 6,
+    "title": "First",
+  },
+  Object {
+    "id": 7,
+    "title": "Second",
+  },
+  Object {
+    "id": 8,
+    "title": "Third",
+  },
+]
+`;
