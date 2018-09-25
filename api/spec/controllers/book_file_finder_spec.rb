@@ -10,6 +10,7 @@ RSpec.describe BookFileFinder do
   it "enforces proper file path" do
     path = "spec/controllers/concerns/testbook/"
     bad_path = "spec/controllers/concerns/testbook"
-    expect(BookFileFinder.new(path).entries).to eq BookFileFinder.new(bad_path).entries
+    expect(BookFileFinder.new(path).entries).to eq \
+      BookFileFinder.new(bad_path).entries
   end
 end
