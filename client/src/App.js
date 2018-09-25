@@ -30,7 +30,9 @@ class App extends Component {
   
   renderContentBlocks = (content) => {
     let content_blocks = [];
-    content.forEach((block) => {content_blocks.push(<p key={content_blocks.length}>{block.content}</p>)});
+    content.forEach((block) => {
+      content_blocks.push(<p key={content_blocks.length}>{block.content}</p>)
+    });
     return content_blocks;
   }
   

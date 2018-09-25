@@ -17,6 +17,8 @@ describe("nodes Reducer", ()=>{
   });
   
   test("LOAD_NODES overwrites nodes array",()=>{
-    expect(nodesReducer(defaultState,actions.loadNodes(newState))).toEqual(newState);
+    expect(
+      nodesReducer(defaultState,actions.loadNodes(newState))
+    ).toEqual(newState);
   });
 });
