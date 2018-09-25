@@ -21,7 +21,7 @@ class ChapterFile
           return false
         end
       end
-      puts "#{@file_path} removed as invalid chapter; ensure file has at least one heading."
+      puts "#{@file_path} removed as invalid chapter"
       return true
     end
 end

@@ -3,7 +3,9 @@ require 'chapter_file.rb'
 
 RSpec.describe ChapterFile do
   it "invalidates chapters without titles/headings" do
-    chapter_test = ChapterFile.new("spec/lib/testbook/invalidChapter.md").invalid?
+    chapter_test = ChapterFile.new(
+      "spec/lib/testbook/invalidChapter.md"
+    ).invalid?
     expect(chapter_test).to be_truthy
   end
   

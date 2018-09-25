@@ -14,5 +14,9 @@
 class Node < ApplicationRecord
   belongs_to :chapter
   
-  scope :fsa, -> { order(chapter_id: :asc, id: :asc ).select(:id, :chapter_id, :node_type, :content) }
+  scope :fsa, -> { 
+    order(chapter_id: :asc, id: :asc ).select(
+      :id, :chapter_id, :node_type, :content
+    )
+  }
 end

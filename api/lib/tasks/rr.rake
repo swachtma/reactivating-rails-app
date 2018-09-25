@@ -16,7 +16,9 @@ namespace :rr do
       chapter.save
       
       chapter.body.each do |node|
-        chapter.record.nodes.create(node_type: node.type.to_s, content: node.to_commonmark)
+        chapter.record.nodes.create(
+          node_type: node.type.to_s, content: node.to_commonmark
+        )
       end
     end
   end

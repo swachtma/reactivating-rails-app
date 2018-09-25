@@ -18,11 +18,15 @@ class BookFileFinder
     
     def filter_chapter_files(raw_file_list)
         raw_file_list.select do |file|
-            File.file?(file) && File.extname(file) == ".md" && !/readme\.md/i.match?(file)
+            File.file?(file) && \
+            File.extname(file) == ".md" && \
+            !/readme\.md/i.match?(file)
         end
     end
     
     def expand_file_paths(file_array)
+      # Array.map allows us to iterate through the array
+      # updating each by concatenating the directory path onto the file name
       file_array.map do |file|
         @path + file
       end
