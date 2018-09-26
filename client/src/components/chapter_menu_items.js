@@ -17,25 +17,38 @@ export default class ChapterMenuItems extends Component {
     );
   }
   
-  renderChapterMenuItems = (chapters) => {
+  renderChapterOptions = () => {
     let chapters_list = [];
-    chapters.forEach((chapter) => {
+    this.props.chapters.forEach((chapter) => {
       chapters_list.push(
-        <Dropdown.Item key={"chapter_" + chapter.id} id={chapter.id}>
-          {chapter.title}
-        </Dropdown.Item>
+        { 
+          key: "chapter_" + chapter.id,
+          id:  "chapter_menu_item_" + chapter.id,
+          value: chapter.id,
+          text: chapter.title,
+         active: chapter.id === this.props.active_chapter.id
+        }
       );
     });
     return chapters_list;
   }
   
   render() {
-    return (
-      <Dropdown text='Jump to Chapter...' className='link item'>
-        <Dropdown.Menu>
-          { this.renderChapterMenuItems(this.props.chapters) }
-        </Dropdown.Menu>
-      </Dropdown>
-    );
+    if(this.props.chapters !== [] && this.props.active_chapter){
+      return( 
+        <Dropdown 
+          tabIndex="1"
+          placeholder="Jump to Chapter..."
+          className="link item"
+          selectOnNavigation={false}
+          value={this.props.active_chapter.id}
+          text={this.props.active_chapter.title}
+          onChange={this.props.dispatchRouteChapter}
+         options={this.renderChapterOptions()} 
+        />
+      );
+    } else {
+      return null;
+    }
   }
 }

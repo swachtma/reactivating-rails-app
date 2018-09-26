@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes actionCreators routeChapter(chapter_id) 1`] = `
+Object {
+  "payload": Object {
+    "chapter_id": 5,
+  },
+  "type": "CHAPTER_ROUTE",
+}
+`;
+
+exports[`Routes actionCreators routeHome() 1`] = `
+Object {
+  "type": "HOME_ROUTE",
+}
+`;
