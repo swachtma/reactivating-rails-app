@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chapter & Home Routes Assign default chapter of one on HOME_ROUTE 1`] = `
+Object {
+  "active_chapter_id": 1,
+}
+`;
+
+exports[`Chapter & Home Routes assign payload chapter on CHAPTER_ROUTE 1`] = `
+Object {
+  "active_chapter_id": 5,
+}
+`;

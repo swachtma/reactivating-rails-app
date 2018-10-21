@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 
 import ChapterMenuItems from '../components/chapter_menu_items';
-import { loadChapters } from '../actions/chapters';
 import { routeChapter } from '../actions/routes';
 
 const mapStateToProps = (state) => ({
@@ -12,7 +11,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchLoadChapters: (payload) => dispatch(loadChapters(payload)),
   dispatchRouteChapter: (event,target) => dispatch(routeChapter(target.value))
 });
 

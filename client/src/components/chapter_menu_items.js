@@ -1,22 +1,7 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'semantic-ui-react';
-import axios from 'axios';
 
 export default class ChapterMenuItems extends Component {
-  componentWillMount(){
-    axios.get("/api/chapters")
-    .then(
-      (response) => {
-        this.props.dispatchLoadChapters(response.data);
-      }
-    )
-    .catch(
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  
   renderChapterOptions = () => {
     let chapters_list = [];
     this.props.chapters.forEach((chapter) => {
@@ -26,7 +11,7 @@ export default class ChapterMenuItems extends Component {
           id:  "chapter_menu_item_" + chapter.id,
           value: chapter.id,
           text: chapter.title,
-         active: chapter.id === this.props.active_chapter.id
+          active: chapter.id === this.props.active_chapter.id
         }
       );
     });
@@ -44,7 +29,7 @@ export default class ChapterMenuItems extends Component {
           value={this.props.active_chapter.id}
           text={this.props.active_chapter.title}
           onChange={this.props.dispatchRouteChapter}
-         options={this.renderChapterOptions()} 
+          options={this.renderChapterOptions()} 
         />
       );
     } else {
