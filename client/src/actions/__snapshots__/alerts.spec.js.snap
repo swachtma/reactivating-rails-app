@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alerts actionCreators addAlerts(message, level, scope) matches snapshot 1`] = `
+Object {
+  "payload": Object {
+    "level": "info",
+    "message": "hello world",
+    "scope": "application",
+    "timestamp": 0,
+  },
+  "type": "ADD_ALERT",
+}
+`;
+
+exports[`Alerts actionCreators clearAlerts() matches snapshot 1`] = `
+Object {
+  "type": "CLEAR_ALERTS",
+}
+`;

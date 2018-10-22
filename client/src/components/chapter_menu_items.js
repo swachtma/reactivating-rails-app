@@ -19,8 +19,7 @@ export default class ChapterMenuItems extends Component {
   }
   
   render() {
-    if(this.props.chapters !== [] && this.props.active_chapter){
-      return( 
+    return( 
         <Dropdown 
           tabIndex="1"
           placeholder="Jump to Chapter..."
@@ -32,8 +31,5 @@ export default class ChapterMenuItems extends Component {
           options={this.renderChapterOptions()} 
         />
       );
-    } else {
-      return null;
-    }
   }
 }

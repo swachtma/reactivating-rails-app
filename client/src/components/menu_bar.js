@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Image, Menu } from 'semantic-ui-react';
+
 import rrLogo from '../assets/images/reactivating-rails.png';
-import ChapterMenuItems from '../containers/chapter_menu_items';
+import { ConnectedChapterMenuItems } from '../containers/chapter_provider';
 
 const fixedMenuStyle = {
   backgroundColor: '#fff',
@@ -19,7 +20,7 @@ class MenuBar extends Component {
             <Menu.Item><Image width='200' src={rrLogo} /></Menu.Item>
 
             <Menu.Menu position='right'>
-              <ChapterMenuItems />
+              <ConnectedChapterMenuItems />
             </Menu.Menu>
           </Container>
         </Menu>

@@ -6,6 +6,7 @@ import restoreScroll from 'redux-first-router-restore-scroll'
 import createHistory from 'history/createBrowserHistory';
 
 import * as ROUTES from '../constants/settings';
+import alerts from './alerts';
 import chapters from './chapters';
 import nodes from './nodes';
 import settings from './settings';
@@ -28,7 +29,7 @@ const {
 );
 
 const reducers = combineReducers(
-  {location: routeReducer, settings, nodes, chapters}
+  {location: routeReducer, settings, nodes, chapters, alerts}
 );
 
 const sagaMiddleware = createSagaMiddleware();
