@@ -43,7 +43,6 @@ class AlertList extends Component {
   }
   
   render() {
-    console.log(this.props.alerts)
     return (
       <div className={"alert_list_" + this.props.scope}>
         { this.renderAlertMessages(this.props.alerts) }
