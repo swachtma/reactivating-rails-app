@@ -51,3 +51,6 @@ client/jest_0/
 /client/npm-debug.log*
 /client/yarn-debug.log*
 /client/yarn-error.log*
+
+# Docker Secrets
+/.docker/.secrets/*

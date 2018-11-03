@@ -6,33 +6,31 @@ import restoreScroll from 'redux-first-router-restore-scroll'
 import createHistory from 'history/createBrowserHistory';
 
 import * as ROUTES from '../constants/settings';
-import alerts from './alerts';
 import chapters from './chapters';
 import nodes from './nodes';
 import settings from './settings';
+import alerts from './alerts';
+import user from './user';
 import rootSaga from '../sagas/root';
 
 const history = createHistory();
 const routeMap = {
   // Routes here "ACTION_NAME":"/some/route"
   [ROUTES.HOME_ROUTE]: "/",
-  [ROUTES.CHAPTER_ROUTE]: "/chapter/:chapter_id"
+  [ROUTES.CHAPTER_ROUTE]: "/chapter/:chapter_id",
+  [ROUTES.AUTH_ROUTE]: "/auth/:token"
 };
 
-const { 
-  reducer: routeReducer,
-  middleware: routerMiddleware,
-  enhancer: routerEnhancer,
-  initialDispatch 
-} = connectRoutes( 
-  history, routeMap, { restoreScroll: restoreScroll(), initialDispatch: false }
+const { reducer: routeReducer, middleware: routerMiddleware, enhancer: routerEnhancer, initialDispatch } = connectRoutes(
+  history,
+  routeMap,
+  { restoreScroll: restoreScroll(), initialDispatch: false }
 );
 
-const reducers = combineReducers(
-  {location: routeReducer, settings, nodes, chapters, alerts}
-);
+const reducers = combineReducers({location: routeReducer, settings, nodes, chapters, alerts, user});
 
 const sagaMiddleware = createSagaMiddleware();
+
 const middlewares = applyMiddleware(sagaMiddleware, routerMiddleware);
 
 const store = createStore(

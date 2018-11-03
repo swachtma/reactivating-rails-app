@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User actionCreators clearUser wipes user 1`] = `
+Object {
+  "type": "CLEAR_USER",
+}
+`;
+
+exports[`User actionCreators setUser() assigns active user 1`] = `
+Object {
+  "payload": Object {
+    "avatar": "https://avatars0.githubusercontent.com/u/shiba",
+    "github_email": "awesome@wow.com",
+    "id": 9000,
+    "token": "wow.much.secret",
+    "username": "doge",
+  },
+  "type": "SET_USER",
+}
+`;

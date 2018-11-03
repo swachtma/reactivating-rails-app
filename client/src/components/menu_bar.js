@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Image, Menu } from 'semantic-ui-react';
-
+import { Container, Image, Menu, Icon } from 'semantic-ui-react';
+  
 import rrLogo from '../assets/images/reactivating-rails.png';
 import { ConnectedChapterMenuItems } from '../containers/chapter_provider';
+import { ConnectedUserBadge } from '../containers/user_provider';
 
 const fixedMenuStyle = {
   backgroundColor: '#fff',
@@ -21,6 +22,7 @@ class MenuBar extends Component {
 
             <Menu.Menu position='right'>
               <ConnectedChapterMenuItems />
+              <ConnectedUserBadge />
             </Menu.Menu>
           </Container>
         </Menu>
