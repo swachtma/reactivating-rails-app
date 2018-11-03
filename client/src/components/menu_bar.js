@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Image, Menu, Icon } from 'semantic-ui-react';
+import { Container, Image, Menu } from 'semantic-ui-react';
   
 import rrLogo from '../assets/images/reactivating-rails.png';
 import { ConnectedChapterMenuItems } from '../containers/chapter_provider';
