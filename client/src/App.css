@@ -1,5 +1,8 @@
 img {max-width: 100%;}
 
+.ui.menu .item {padding: 0 1em;}
+
+#main-section {margin-top: 85px;}
 #reader-pane img {border: 1px solid #021a40;}
 
 code {
@@ -15,14 +18,8 @@ code {
 .lowPrioritySection .fa { opacity: 100; }
 .lowPrioritySection { cursor: pointer; } 
 .highPrioritySection, .highPrioritySection code { background-color: rgba(255,255,217,0.75) }
-
 pre {white-space: pre-wrap; margin: 0;}
-
 #root .hljs {padding: 0;}
-
-#reader-pane {
-  margin-top: 85px;
-}
 
 @media only screen and (max-width: 990px) {
   #app .banner {

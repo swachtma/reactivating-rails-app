@@ -11,6 +11,7 @@ import nodes from './nodes';
 import settings from './settings';
 import alerts from './alerts';
 import user from './user';
+import bookmarks from './bookmarks';
 import rootSaga from '../sagas/root';
 
 const history = createHistory();
@@ -18,7 +19,8 @@ const routeMap = {
   // Routes here "ACTION_NAME":"/some/route"
   [ROUTES.HOME_ROUTE]: "/",
   [ROUTES.CHAPTER_ROUTE]: "/chapter/:chapter_id",
-  [ROUTES.AUTH_ROUTE]: "/auth/:token"
+  [ROUTES.AUTH_ROUTE]: "/auth/:token",
+  [ROUTES.ERROR_ROUTE]: "/error"
 };
 
 const { reducer: routeReducer, middleware: routerMiddleware, enhancer: routerEnhancer, initialDispatch } = connectRoutes(
@@ -27,7 +29,7 @@ const { reducer: routeReducer, middleware: routerMiddleware, enhancer: routerEnh
   { restoreScroll: restoreScroll(), initialDispatch: false }
 );
 
-const reducers = combineReducers({location: routeReducer, settings, nodes, chapters, alerts, user});
+const reducers = combineReducers({location: routeReducer, user, settings, bookmarks, alerts, nodes, chapters});
 
 const sagaMiddleware = createSagaMiddleware();
 

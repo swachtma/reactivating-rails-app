@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
+import { Container } from 'semantic-ui-react';
 import './App.css'
 
-import ReaderPane from './components/reader_pane';
-import MenuBar from './components/menu_bar';
-import FilteredNodesList from './containers/filtered_nodes_list';
+import routerProvider from './containers/route_provider';
 import connectToAlerts from './containers/alert_provider';
-let ApplicationAlerts = connectToAlerts();
+import MenuBar from './components/menu_bar';
+const ConnectedRouterSwitch = routerProvider();
+const ApplicationAlerts = connectToAlerts();
+
 
 class App extends Component {
   render() {
     return (
       <div id="app">
         <MenuBar />
-        <ReaderPane>
+        <Container text id="main-section">
           <ApplicationAlerts />
-          <FilteredNodesList />
-        </ReaderPane>
+          <ConnectedRouterSwitch />
+        </Container>
       </div>
     );
   }
