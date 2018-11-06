@@ -12,6 +12,8 @@
 #
 
 class User < ApplicationRecord
+  has_one :bookmark
+  
   def fsa(token)
     {
       id: id,

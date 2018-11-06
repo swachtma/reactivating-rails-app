@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     get 'hydrate_user/', to: "authentication#show"
     get 'nodes/', to: "nodes#index"
     get 'chapters/', to: "chapters#index"
+    resources :bookmarks, only: [:index, :create]
   end
 end

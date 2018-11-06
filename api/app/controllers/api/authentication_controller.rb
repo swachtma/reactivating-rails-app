@@ -4,6 +4,8 @@ class Api::AuthenticationController < ApplicationController
 
   def github
     code = params[:code]
+    bounce_path = ERB::Util.url_encode(params[:bounce_path])
+
     github = Github.new client_id: ENV["GITHUB_CLIENT_ID"], client_secret: GITHUB_CLIENT_SECRET
     token = github.get_token(code).token
     
@@ -11,7 +13,7 @@ class Api::AuthenticationController < ApplicationController
     user = User.create_or_fetch(github_users.get)
     jwt = TokenOps.encode_short(user)
     
-    redirect_to "#{ENV["CLIENT_URL"]}/auth/#{jwt}"
+    redirect_to "#{ENV["CLIENT_URL"]}/auth/#{jwt}/#{bounce_path}", status: 302
   end
 
   def show

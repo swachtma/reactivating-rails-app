@@ -1,24 +1,19 @@
-import { takeLatest, put, call, all } from 'redux-saga/effects';
-import { delay } from 'redux-saga';
+import { takeLatest, put, call } from 'redux-saga/effects';
 import axios from 'axios';
 
 import * as routes from '../constants/settings';
-import { routeHome } from '../actions/routes';
 import { setUser } from '../actions/user';
-import { addAlert, clearAlerts } from '../actions/alerts';
+import redirectToPathIf from './utils/redirect_path';
+import retrieveUserBookmark from './utils/retrieve_bookmark';
 
 export function* hydrateUser(action){
-  yield put(routeHome());
+  yield redirectToPathIf(action.payload.bounce_path);
   
   try{
     let user = yield call(axios.get, "/api/hydrate_user?token=" + action.payload.token);
-    yield all([
-      put(setUser(user.data)),
-      put(addAlert("Sign in successful, welcome " + user.data.username + ".","success"))
-    ]);
+    yield put(setUser(user.data));
     
-    yield call(delay,3000);
-    yield put(clearAlerts());
+    yield call(retrieveUserBookmark);
   } catch(e){
     // We need some error handling
   }
