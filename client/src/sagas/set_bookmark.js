@@ -6,7 +6,6 @@ import { setBookmarkLocations } from '../actions/bookmarks';
 
 export function* setBookmarks(action){
   let ch_id = action.payload.chapter_id;
-  console.log(ch_id)
   const auth_client = yield axiosCreateClient();
   //Set bookmarks locally
   yield put(setBookmarkLocations(ch_id));
