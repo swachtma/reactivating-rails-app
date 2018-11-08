@@ -15,7 +15,7 @@ export function* setBookmarks(action){
       let response = yield call(auth_client.post,'/api/bookmarks',{chapter_id: ch_id});
       console.log(response.data.message);
     } catch(e){
-      console.log(e);
+      console.log(e.message);
     }
   }
 } 

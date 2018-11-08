@@ -12,6 +12,8 @@
 
 class Bookmark < ApplicationRecord
   belongs_to :user
+  validates :furthest_read, :last_read, 
+    numericality: { integer: true, strict: BookmarkErrors::BookmarkChapterInvalid }
   before_save :ensure_furthest_location
   
   def fsa

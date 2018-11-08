@@ -9,7 +9,8 @@ class ApplicationController < ActionController::API
   
   private
     def render_error_response(error)
-      render json: {name: error, message: error.message, status: error.code}, status: error.code
+      payload = {name: error, message: error.message, status: error.code}
+      render json: {type: error.status, payload: payload}, status: error.code
     end
   
     # Decode the authorization header token and return the payload

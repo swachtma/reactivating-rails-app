@@ -1,8 +1,8 @@
-/* global expect */
+/* global expect, jest */
 import { instantiateBook, checkBookHydration } from './instantiate_book';
 import { cloneableGenerator } from 'redux-saga/utils';
 import { select, all, call, put } from 'redux-saga/effects';
-import axios from 'axios';
+import axiosCreateClient from './utils/axios_client';
 
 import { loadNodes } from '../actions/nodes';
 import { loadChapters } from '../actions/chapters';
@@ -40,11 +40,16 @@ describe("instantiateBook", () => {
   });
   
   describe("BRANCH dehydration === true", ()=> {
+    test("begin by setting up a non-authenticate axios client", ()=>{
+      expect(saga.dehydrated.gen.next(true).value).toEqual(call(axiosCreateClient,false));
+    });
+    
     test("begins /api/nodes && api/chapters requests", ()=> {
-      expect(saga.dehydrated.gen.next(true).value).toEqual(
+      let pub_client = {"get": jest.fn()};
+      expect(saga.dehydrated.gen.next(pub_client).value).toEqual(
         all([
-          call(axios.get,'/api/nodes'),
-          call(axios.get,'/api/chapters')
+          call([pub_client,"get"],'/api/nodes'),
+          call([pub_client,"get"],'/api/chapters')
         ])
       );
       
@@ -61,9 +66,7 @@ describe("instantiateBook", () => {
           {data: [{title: "Test Chapter"}]}
         ];
         
-        expect(saga.dehydrated.green.next(
-          [nodes, chapters]).value
-        ).toEqual(all([
+        expect(saga.dehydrated.green.next([nodes, chapters]).value).toEqual(all([
           put(loadNodes(nodes.data)),
           put(loadChapters(chapters.data))
         ]));
@@ -73,7 +76,7 @@ describe("instantiateBook", () => {
     describe("BRANCH try/catch === red", () => {
       test("dispatches ADD_ALERT with message of failed load", () =>{
         let red_case = saga.dehydrated.red.next(new Error("awww shiiit."));
-        expect(red_case.value.PUT.action.type).toEqual("ADD_ALERT");
+        expect(red_case.value.PUT.action.type).toEqual("ERROR_ROUTE");
       });
     });
   });

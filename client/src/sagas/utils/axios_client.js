@@ -5,7 +5,7 @@ const axios_config = {
   transformResponse: [(data) => {
     let jdata = JSON.parse(data);
     if(jdata.type === "ERROR|FAILURE"){ throw jdata.payload }
-    return data;
+    return jdata;
   }]
 };
 

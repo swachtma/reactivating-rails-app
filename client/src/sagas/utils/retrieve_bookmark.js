@@ -20,7 +20,8 @@ export default function* retrieveUserBookmark(){
       
       return true;
     } catch (e) {
-      console.log(e.response.data);
+      // fails silently without throwing further errors to parent sagas
+      console.log(e.message);
       return false;
     }
   } else { return false; }
