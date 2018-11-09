@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id           :integer          not null, primary key
+#  github_id    :integer
+#  github_email :string
+#  username     :string
+#  avatar       :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -11,7 +24,7 @@ RSpec.describe User, type: :model do
   end
   
   it "provides .fsa(token) to produce user FSA response object" do
-   fsa = @user.fsa("sometoken")
+   fsa = @user.fsa("sometoken", 200000)
    expect(fsa[:username]).to eq @user.username
    expect(fsa[:token]).to eq "sometoken"
   end

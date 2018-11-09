@@ -14,13 +14,14 @@
 class User < ApplicationRecord
   has_one :bookmark
   
-  def fsa(token)
+ def fsa(token, expires)
     {
       id: id,
       github_email: github_email,
       username: username,
       avatar: avatar,
-      token: token
+      token: token,
+      expires: expires
     }
   end
   

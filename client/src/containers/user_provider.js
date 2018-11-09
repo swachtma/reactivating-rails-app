@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import UserBadge from '../components/user_badge';
-import { clearUser } from '../actions/user';
+import { signalSignout } from '../actions/user';
 
 export const connectToUser = (WrappedComponent) => {
    return connect(mapStateToProps,mapDispatchToProps)(WrappedComponent);
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchClearUser: (e) => dispatch(clearUser())
+  dispatchSignalSignout: (e) => dispatch(signalSignout())
 });
 
 // EXPORTABLE CONNECTED COMPONENTS

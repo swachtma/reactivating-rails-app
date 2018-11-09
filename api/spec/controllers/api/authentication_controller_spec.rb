@@ -18,12 +18,12 @@ RSpec.describe Api::AuthenticationController, type: :controller do
       allow(@github_users).to receive(:get) { sample_response }
     end
     
-    it "redirects new users to client" do
+    it "returns http success for new users" do
       get :github
       expect(response).to have_http_status(302)
     end
     
-    it "redirects existing users to client" do
+    it "returns http success for existing users" do
       User.create(github_id: 1, github_email: "someone", username: "someoneelse", avatar: "someimage")
       get :github
       expect(response).to have_http_status(302)
@@ -31,13 +31,33 @@ RSpec.describe Api::AuthenticationController, type: :controller do
   end
   
   describe "GET #show" do
-    it "returns a user profile" do
-      user = User.create(github_id: 1, github_email: "someone", username: "someoneelse", avatar: "someimage")
-      token = TokenOps.encode_short(user)
+    before(:each) do
+      @user = User.create(github_id: 1, github_email: "someone", username: "someoneelse", avatar: "someimage")
+      @token = TokenOps.encode(2.minutes.from_now, @user)
+    end
       
-      get :show, params: {:token => token}
+    it "returns a user profile on valid SHORT token" do
+      get :show, params: {:token => @token}
       expect(response).to have_http_status(:success)
-      expect(JSON.parse(response.body)).to include("id","username","github_email","token","avatar")
+      expect(JSON.parse(response.body)).to include("id","username","github_email","token","avatar","expires")
+    end
+    
+    it "updates expiration if token is type == SHORT" do
+      get :show, params: {:token => @token}
+      expect(response).to have_http_status(:success)
+      expect(JSON.parse(response.body)["expires"]).to be > 2.days.from_now.to_i - Time.now.to_i
+    end
+    
+    it "does not update expiration if type == LONG" do
+      get :show, params: {:token => TokenOps.encode(14.days.from_now, @user, "LONG")}
+      expect(response).to have_http_status(:success)
+      expect(JSON.parse(response.body)["expires"]).to be < 15.day.from_now.to_i
+    end
+    
+    it "raises AuthenticationErrors::BadToken if expiration < 12 hours" do
+      get :show, params: {:token => TokenOps.encode(11.hours.from_now, @user, "LONG")}
+      expect(response).to have_http_status(500)
+      expect(JSON.parse(response.body)["type"]).to eq "ERROR|FAILURE"
     end
   end
 end 

@@ -1,6 +1,7 @@
 class Api::AuthenticationController < ApplicationController
+  include TokenOps
   GITHUB_CLIENT_SECRET = File.read("/run/secrets/github_client_secret")
-  
+
   def github
     begin
       code = params[:code]
@@ -10,7 +11,7 @@ class Api::AuthenticationController < ApplicationController
       
       github_users = Github::Client::Users.new oauth_token: token
       user = User.create_or_fetch(github_users.get)
-      jwt = TokenOps.encode_short(user)
+      jwt = TokenOps.encode(2.minutes.from_now.to_i, user, "SHORT")
       
       redirect_to "#{ENV["CLIENT_URL"]}/auth/#{jwt}/#{bounce_path}", status: 302
     rescue
@@ -21,11 +22,19 @@ class Api::AuthenticationController < ApplicationController
   def show
     begin 
       token = params[:token]
-      user_id = TokenOps.decode(token)[0]["id"]
-      user = User.find(user_id)
-      long_token = TokenOps.encode_long(user)
+      decoded_token = TokenOps.decode(token)[0]
+      expires = decoded_token["exp"]
+      user = User.find(decoded_token["id"])
       
-      render json: user.fsa(long_token), status: 200
+      if(decoded_token["type"] == "SHORT")
+        expires = 30.days.from_now.to_i
+        token = TokenOps.encode(expires, user, "LONG")
+      end
+
+      countdown = (expires - Time.now.to_i)
+      raise AuthenticationErrors::BadToken if countdown < 12 * 60 * 60
+      
+      render json: user.fsa(token, countdown), status: 200
     rescue
       raise token == "githubfailure" ? AuthenticationErrors::GithubFailure : AuthenticationErrors::BadToken
     end

@@ -1,23 +1,43 @@
 require 'rails_helper'
 
 RSpec.describe TokenOps do
-  describe "encode" do
-    it "provides an encode short and long  function" do
-      expect(TokenOps.respond_to? :encode_short).to be true
-      expect(TokenOps.respond_to? :encode_long).to be true
+    it "provides an encode and decode method" do
+      expect(TokenOps.respond_to? :encode).to be true
+      expect(TokenOps.respond_to? :decode).to be true
     end
     
-    it "can decode a user's id" do
-      user = User.create({
-        github_id: "test",
-        github_email: "test@test.com",
-        username:"something_witty",
-        avatar:"someimage.gif",
-      })
+    describe "encode" do
+      before(:each) do
+        @user = User.create({
+          github_id: "test",
+          github_email: "test@test.com",
+          username:"something_witty",
+          avatar:"someimage.gif",
+        })
+      end
       
-      token = TokenOps.encode_short user
-      decoded_id = TokenOps.decode(token)[0]["id"]
-      expect(decoded_id).to eq user.id
-    end
+      describe "defaults" do
+        before(:each) do
+          token = TokenOps.encode(2.minutes.from_now, @user)
+          @decoded = TokenOps.decode(token)[0]
+        end
+        
+        it "provide an id value and expiration when decoded" do
+          expect(@decoded["id"]).not_to be_nil
+          expect(@decoded["exp"]).not_to be_nil
+        end
+        
+        it "default to SHORT type, if not specified" do
+          expect(@decoded["type"]).to eq "SHORT"
+        end
+      end
+      
+      describe "explicit LONG" do
+        it "can be decoded" do
+          token = TokenOps.encode(30.days.from_now, @user)
+          decoded = TokenOps.decode(token)[0]
+          expect(decoded["exp"]).not_to be_nil
+        end
+      end
   end
 end

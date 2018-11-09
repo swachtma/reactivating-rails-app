@@ -7,6 +7,7 @@ import axiosCreateClient from './utils/axios_client';
 import { loadNodes } from '../actions/nodes';
 import { loadChapters } from '../actions/chapters';
 import { addAlert } from '../actions/alerts';
+import sagaMiddlewareFactory from 'redux-saga';
 
 describe("checkBookHydration", ()=> {
   const cases = [
@@ -40,11 +41,8 @@ describe("instantiateBook", () => {
   });
   
   describe("BRANCH dehydration === true", ()=> {
-    test("begin by setting up a non-authenticate axios client", ()=>{
-      expect(saga.dehydrated.gen.next(true).value).toEqual(call(axiosCreateClient,false));
-    });
-    
     test("begins /api/nodes && api/chapters requests", ()=> {
+      saga.dehydrated.gen.next(true)
       let pub_client = {"get": jest.fn()};
       expect(saga.dehydrated.gen.next(pub_client).value).toEqual(
         all([

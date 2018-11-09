@@ -15,7 +15,7 @@ class UserBadge extends Component {
         <Menu.Item name={this.props.username}>
           <Dropdown icon={badge} compact pointing="top right">
             <Dropdown.Menu>
-              <Dropdown.Item onClick={this.props.dispatchClearUser}>Sign Out</Dropdown.Item>
+              <Dropdown.Item onClick={this.props.dispatchSignalSignout}>Sign Out</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
