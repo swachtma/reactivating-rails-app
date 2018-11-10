@@ -4,7 +4,7 @@ import './App.css'
 
 import routerProvider from './containers/route_provider';
 import connectToAlerts from './containers/alert_provider';
-import MenuBar from './components/menu_bar';
+import { ConnectedNavigationMenus } from './containers/chapter_provider';
 const ConnectedRouterSwitch = routerProvider();
 const ApplicationAlerts = connectToAlerts();
 
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <MenuBar />
+        <ConnectedNavigationMenus />
         <Container text id="main-section">
           <ApplicationAlerts />
           <ConnectedRouterSwitch />

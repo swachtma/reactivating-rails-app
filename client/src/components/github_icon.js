@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 import { BASE_AUTH_PATH } from '../constants/settings';
-import routeProvider from '../containers/route_provider';
+
+const styles = {
+  githubIcon: {marginRight: 0}
+};
 
 class GithubIcon extends Component {
   buildRedirect = (loc = this.props.location) => {
@@ -12,12 +15,15 @@ class GithubIcon extends Component {
   render() {
     let rd = this.buildRedirect();
     return (
-      <Menu.Item href={"https://github.com/login/oauth/authorize?client_id=a86bc65853ae65d3be52&redirect_uri=" + rd} name='Sign in with GitHub'>
-        <Icon name='github' style={{marginRight: 0}} size="big" />
+      <Menu.Item 
+        href={"https://github.com/login/oauth/authorize?client_id=a86bc65853ae65d3be52&redirect_uri=" + rd}
+        name='Sign in with GitHub'
+        fitted
+      >
+        <Icon name='github' style={styles.githubIcon} size="big" />
       </Menu.Item>
     );
   }
 }
 
-const ConnectedGitHubIcon = routeProvider(GithubIcon);
-export default ConnectedGitHubIcon;
+export default GithubIcon;

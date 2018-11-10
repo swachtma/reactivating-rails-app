@@ -5,7 +5,8 @@ import { ConnectedChapterFooterLink } from '../containers/chapter_provider';
 import { ConnectedBookmarkModal } from '../containers/bookmarks_provider';
 
 const reader_pane_styles= {
-  paddingBottom: "15px"
+  paddingBottom: "15px",
+  overflowWrap: "break-word"
 };
 
 class ReaderPane extends Component {

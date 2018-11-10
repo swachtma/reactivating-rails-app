@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 
 import UserBadge from '../components/user_badge';
+import SideBarSignout from '../components/side_bar_signout';
 import { signalSignout } from '../actions/user';
 
-export const connectToUser = (WrappedComponent) => {
+ const connectToUser = (WrappedComponent) => {
    return connect(mapStateToProps,mapDispatchToProps)(WrappedComponent);
 };
 
@@ -18,3 +19,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 // EXPORTABLE CONNECTED COMPONENTS
 export const ConnectedUserBadge = connectToUser(UserBadge);
+export const ConnectedSidebarSignOut = connectToUser(SideBarSignout);

@@ -1,22 +1,19 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
-import ChapterMenuItems from '../components/chapter_menu_items';
 import ChapterFooter from '../components/chapter_footer';
+import NavigationMenus from '../components/navigation_menus';
 import { routeChapter } from '../actions/routes';
 
 export const connectToChapters = (WrappedComponent) => {
-  return connect(mapStateToProps,mapDispatchToProps)(
-    chapterProvider(WrappedComponent)
-  );
+   return connect(mapStateToProps,mapDispatchToProps)(chapterProvider(WrappedComponent));
 };
 
 const chapterProvider = (WrappedComponent) => {
   return class extends React.Component {
     render(){
-      if(this.props.chapters !== [] && this.props.active_chapter){
-        return <WrappedComponent {...this.props} />;
-        
+      if(this.props.chapters !== []){
+        return <WrappedComponent {...this.props} active_chapter={this.props.active_chapter || -1} />;
       } else {
         return null;
       }
@@ -41,5 +38,5 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 // EXPORTABLE CONNECTED COMPONENTS
-export const ConnectedChapterMenuItems = connectToChapters(ChapterMenuItems);
 export const ConnectedChapterFooterLink = connectToChapters(ChapterFooter);
+export const ConnectedNavigationMenus = connectToChapters(NavigationMenus);

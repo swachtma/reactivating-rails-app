@@ -1,3 +1,4 @@
+	
 import React, { Component } from 'react';
 import clipboardJS from 'clipboard'
 import CodeFence from './lib/code_fence';
@@ -43,7 +44,7 @@ class CodeBlock extends Component {
   
   componentDidMount(){
     if(this.triggerCopy){
-      let button = this.triggerCopy.querySelector("button");
+      let button = this.triggerCopy.querySelector("button.copy");
       return new clipboardJS(button, {
         text: () => this.code_fence.copy
       });
