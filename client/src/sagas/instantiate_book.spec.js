@@ -40,11 +40,8 @@ describe("instantiateBook", () => {
   });
   
   describe("BRANCH dehydration === true", ()=> {
-    test("begin by setting up a non-authenticate axios client", ()=>{
-      expect(saga.dehydrated.gen.next(true).value).toEqual(call(axiosCreateClient,false));
-    });
-    
     test("begins /api/nodes && api/chapters requests", ()=> {
+      saga.dehydrated.gen.next(true)
       let pub_client = {"get": jest.fn()};
       expect(saga.dehydrated.gen.next(pub_client).value).toEqual(
         all([
