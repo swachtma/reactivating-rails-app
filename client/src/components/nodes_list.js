@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MarkdownIt from 'markdown-it';
-import CodeBlock from './nodes/code_block';
+import CodeExample from '../containers/code_example';
 
 const md = new MarkdownIt();
 
@@ -11,7 +11,7 @@ class NodesList extends Component {
       switch (node.node_type) {
         case("code_block"):
           return nodes_list.push(
-            <CodeBlock key={"node_" + node.id} node={node} />
+            <CodeExample key={"node_" + node.id} node={node} />
           );
         default:
           return nodes_list.push(

@@ -1,12 +1,15 @@
+/* global expect */
 import React from 'react';
-import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
-import buildStore from './reducers/store';
+import { shallow } from 'enzyme';
+
+import config from './test_helper';
 import App from './App';
 
-let { store } = buildStore();
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Provider store={store}><App /></Provider>, div);
+describe("<App />", ()=>{
+  const wrapper = shallow(<App />);
+  it('matches the snapshot', () => { expect(wrapper).toMatchSnapshot(); });
+  
+  let children = ["div#app","Connect(NavigationMenus)","Connect(RouterSwitch)","Connect(AlertList)"];
+  children.forEach((c) => it("renders " + c, ()=>expect(wrapper.find(c).exists()).toBe(true)));
 });

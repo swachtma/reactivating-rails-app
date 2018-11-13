@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { array, shape, number, string, func } from 'prop-types';
 import { Menu, Sidebar, Icon } from 'semantic-ui-react';
 
 import { ConnectedSidebarSignOut } from '../containers/user_provider';
@@ -20,12 +21,21 @@ const styles = {
   }
 };
 
-class SideBarPopout extends Component {
-  state = { visible: false };
+export default class SideBarPopout extends Component {
+  static propTypes = {
+    chapters: array,
+    active_chapter: shape({id: number, title: string}),
+    dispatchRouteChapter: func
+  }
+  
+  constructor(props){
+    super(props);
+    this.state = { visible: false };
+  }
   
   toggleVisibility = (bool) => {
     let vis = bool === undefined ? !this.state.visible : bool;
-    this.setState({ visible: vis});
+    this.setState(()=>({ visible: vis}));
   };
   
   handleLink = (e,t) => {
@@ -33,40 +43,33 @@ class SideBarPopout extends Component {
     this.toggleVisibility();
   };
   
-  handleCloseClick = () => this.toggleVisibility();
-  
-  renderChapterLinks = () => {
-    let { chapters, active_chapter } = this.props;
-    return chapters.map((chapter)=>{
-      let key = "chapter"+chapter.id;
-      let status = chapter.id === active_chapter.id;
-      return(
-        <Menu.Item link={!status} onClick={this.handleLink} disabled={status}
-        name={key} key={key} value={chapter.id}>
-          {chapter.title}
-        </Menu.Item>
-      );
-    });
-  };
+  handleClose = () => this.toggleVisibility();
   
   render() {
+    const {chapters, active_chapter} = this.props;
     let { visible } = this.state;
+    
+    const chapter_links = chapters.map((chapter) => {
+      let status = chapter.id === active_chapter.id;
+      let key = "chapter" + chapter.id;
+      return <Menu.Item key={key} name={key} link={!status} onClick={!status ? this.handleLink : null}
+      disabled={status} value={chapter.id} children={chapter.title} />;
+    });
+    
     return (
       <div style={styles.popoutLayer} onBlur={this.handleBlur} id="sideBarPopout">
         <Sidebar.Pushable style={visible ? styles.pusher : null}>
           <Sidebar as={Menu} animation='overlay' width='wide' visible={visible} 
           style={styles.sideBar} inverted vertical>
-            { this.renderChapterLinks() }
-            <ConnectedSidebarSignOut handleCloseClick={this.handleCloseClick} />
-            <Menu.Item link={true} onClick={this.handleCloseClick} name='Close Menu'>
+            { chapter_links }
+            <ConnectedSidebarSignOut handleCloseClick={this.handleClose} />
+            <Menu.Item link={true} onClick={this.handleClose} name='Close Menu'>
               <div><Icon name='cancel' />Close Menu</div>
             </Menu.Item>
           </Sidebar>
-          <Sidebar.Pusher onClick={this.handleCloseClick} style={visible ? styles.pusher : null} dimmed />
+          <Sidebar.Pusher onClick={this.handleClose} style={visible ? styles.pusher : null} dimmed />
         </Sidebar.Pushable>
       </div>
     );
   }
 }
-
-export default SideBarPopout;

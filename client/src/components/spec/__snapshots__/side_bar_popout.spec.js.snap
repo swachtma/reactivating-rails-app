@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideBarPopout /> rendering renders according to snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SideBarPopout
+    active_chapter={
+        Object {
+            "id": 2,
+            "title": "Test Chapter 1",
+          }
+    }
+    chapters={
+        Array [
+            Object {
+              "id": 1,
+              "title": "Test Chapter 1",
+            },
+            Object {
+              "id": 2,
+              "title": "Test Chapter 2",
+            },
+          ]
+    }
+    dispatchRouteChapter={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <SidebarPushable
+        style={null}
+>
+        <Sidebar
+                animation="overlay"
+                as={[Function]}
+                direction="left"
+                duration={500}
+                inverted={true}
+                style={
+                        Object {
+                                "maxHeight": "100vh",
+                                "maxWidth": "320px",
+                                "minHeight": "100vh",
+                                "minWidth": "320px",
+                                "padding": "45px 0 0 5px",
+                                "zIndex": 100,
+                              }
+                }
+                vertical={true}
+                visible={false}
+                width="wide"
+        >
+                <MenuItem
+                        disabled={false}
+                        link={true}
+                        name="chapter1"
+                        onClick={[Function]}
+                        value={1}
+                >
+                        Test Chapter 1
+                </MenuItem>
+                <MenuItem
+                        disabled={true}
+                        link={false}
+                        name="chapter2"
+                        onClick={null}
+                        value={2}
+                >
+                        Test Chapter 2
+                </MenuItem>
+                <Connect(SideBarSignout)
+                        handleCloseClick={[Function]}
+                />
+                <MenuItem
+                        link={true}
+                        name="Close Menu"
+                        onClick={[Function]}
+                >
+                        <div>
+                                <Icon
+                                        as="i"
+                                        name="cancel"
+                                />
+                                Close Menu
+                        </div>
+                </MenuItem>
+        </Sidebar>
+        <SidebarPusher
+                dimmed={true}
+                onClick={[Function]}
+                style={null}
+        />
+</SidebarPushable>,
+      "id": "sideBarPopout",
+      "onBlur": undefined,
+      "style": Object {
+        "left": "0px",
+        "position": "fixed",
+        "top": "0px",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Sidebar
+            animation="overlay"
+            as={[Function]}
+            direction="left"
+            duration={500}
+            inverted={true}
+            style={
+                        Object {
+                                    "maxHeight": "100vh",
+                                    "maxWidth": "320px",
+                                    "minHeight": "100vh",
+                                    "minWidth": "320px",
+                                    "padding": "45px 0 0 5px",
+                                    "zIndex": 100,
+                                  }
+            }
+            vertical={true}
+            visible={false}
+            width="wide"
+>
+            <MenuItem
+                        disabled={false}
+                        link={true}
+                        name="chapter1"
+                        onClick={[Function]}
+                        value={1}
+            >
+                        Test Chapter 1
+            </MenuItem>
+            <MenuItem
+                        disabled={true}
+                        link={false}
+                        name="chapter2"
+                        onClick={null}
+                        value={2}
+            >
+                        Test Chapter 2
+            </MenuItem>
+            <Connect(SideBarSignout)
+                        handleCloseClick={[Function]}
+            />
+            <MenuItem
+                        link={true}
+                        name="Close Menu"
+                        onClick={[Function]}
+            >
+                        <div>
+                                    <Icon
+                                                as="i"
+                                                name="cancel"
+                                    />
+                                    Close Menu
+                        </div>
+            </MenuItem>
+</Sidebar>,
+          <SidebarPusher
+            dimmed={true}
+            onClick={[Function]}
+            style={null}
+/>,
+        ],
+        "style": null,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animation": "overlay",
+            "as": [Function],
+            "children": Array [
+              Array [
+                <MenuItem
+                  disabled={false}
+                  link={true}
+                  name="chapter1"
+                  onClick={[Function]}
+                  value={1}
+>
+                  Test Chapter 1
+</MenuItem>,
+                <MenuItem
+                  disabled={true}
+                  link={false}
+                  name="chapter2"
+                  onClick={null}
+                  value={2}
+>
+                  Test Chapter 2
+</MenuItem>,
+              ],
+              <Connect(SideBarSignout)
+                handleCloseClick={[Function]}
+/>,
+              <MenuItem
+                link={true}
+                name="Close Menu"
+                onClick={[Function]}
+>
+                <div>
+                                <Icon
+                                                as="i"
+                                                name="cancel"
+                                />
+                                Close Menu
+                </div>
+</MenuItem>,
+            ],
+            "direction": "left",
+            "duration": 500,
+            "inverted": true,
+            "style": Object {
+              "maxHeight": "100vh",
+              "maxWidth": "320px",
+              "minHeight": "100vh",
+              "minWidth": "320px",
+              "padding": "45px 0 0 5px",
+              "zIndex": 100,
+            },
+            "vertical": true,
+            "visible": false,
+            "width": "wide",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "chapter1",
+              "nodeType": "class",
+              "props": Object {
+                "children": "Test Chapter 1",
+                "disabled": false,
+                "link": true,
+                "name": "chapter1",
+                "onClick": [Function],
+                "value": 1,
+              },
+              "ref": null,
+              "rendered": "Test Chapter 1",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "chapter2",
+              "nodeType": "class",
+              "props": Object {
+                "children": "Test Chapter 2",
+                "disabled": true,
+                "link": false,
+                "name": "chapter2",
+                "onClick": null,
+                "value": 2,
+              },
+              "ref": null,
+              "rendered": "Test Chapter 2",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleCloseClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <div>
+                  <Icon
+                                    as="i"
+                                    name="cancel"
+                  />
+                  Close Menu
+</div>,
+                "link": true,
+                "name": "Close Menu",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Icon
+                      as="i"
+                      name="cancel"
+/>,
+                    "Close Menu",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "i",
+                      "name": "cancel",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "Close Menu",
+                ],
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "dimmed": true,
+            "onClick": [Function],
+            "style": null,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <SidebarPushable
+          style={null}
+>
+          <Sidebar
+                    animation="overlay"
+                    as={[Function]}
+                    direction="left"
+                    duration={500}
+                    inverted={true}
+                    style={
+                              Object {
+                                        "maxHeight": "100vh",
+                                        "maxWidth": "320px",
+                                        "minHeight": "100vh",
+                                        "minWidth": "320px",
+                                        "padding": "45px 0 0 5px",
+                                        "zIndex": 100,
+                                      }
+                    }
+                    vertical={true}
+                    visible={false}
+                    width="wide"
+          >
+                    <MenuItem
+                              disabled={false}
+                              link={true}
+                              name="chapter1"
+                              onClick={[Function]}
+                              value={1}
+                    >
+                              Test Chapter 1
+                    </MenuItem>
+                    <MenuItem
+                              disabled={true}
+                              link={false}
+                              name="chapter2"
+                              onClick={null}
+                              value={2}
+                    >
+                              Test Chapter 2
+                    </MenuItem>
+                    <Connect(SideBarSignout)
+                              handleCloseClick={[Function]}
+                    />
+                    <MenuItem
+                              link={true}
+                              name="Close Menu"
+                              onClick={[Function]}
+                    >
+                              <div>
+                                        <Icon
+                                                  as="i"
+                                                  name="cancel"
+                                        />
+                                        Close Menu
+                              </div>
+                    </MenuItem>
+          </Sidebar>
+          <SidebarPusher
+                    dimmed={true}
+                    onClick={[Function]}
+                    style={null}
+          />
+</SidebarPushable>,
+        "id": "sideBarPopout",
+        "onBlur": undefined,
+        "style": Object {
+          "left": "0px",
+          "position": "fixed",
+          "top": "0px",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Sidebar
+              animation="overlay"
+              as={[Function]}
+              direction="left"
+              duration={500}
+              inverted={true}
+              style={
+                            Object {
+                                          "maxHeight": "100vh",
+                                          "maxWidth": "320px",
+                                          "minHeight": "100vh",
+                                          "minWidth": "320px",
+                                          "padding": "45px 0 0 5px",
+                                          "zIndex": 100,
+                                        }
+              }
+              vertical={true}
+              visible={false}
+              width="wide"
+>
+              <MenuItem
+                            disabled={false}
+                            link={true}
+                            name="chapter1"
+                            onClick={[Function]}
+                            value={1}
+              >
+                            Test Chapter 1
+              </MenuItem>
+              <MenuItem
+                            disabled={true}
+                            link={false}
+                            name="chapter2"
+                            onClick={null}
+                            value={2}
+              >
+                            Test Chapter 2
+              </MenuItem>
+              <Connect(SideBarSignout)
+                            handleCloseClick={[Function]}
+              />
+              <MenuItem
+                            link={true}
+                            name="Close Menu"
+                            onClick={[Function]}
+              >
+                            <div>
+                                          <Icon
+                                                        as="i"
+                                                        name="cancel"
+                                          />
+                                          Close Menu
+                            </div>
+              </MenuItem>
+</Sidebar>,
+            <SidebarPusher
+              dimmed={true}
+              onClick={[Function]}
+              style={null}
+/>,
+          ],
+          "style": null,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "animation": "overlay",
+              "as": [Function],
+              "children": Array [
+                Array [
+                  <MenuItem
+                    disabled={false}
+                    link={true}
+                    name="chapter1"
+                    onClick={[Function]}
+                    value={1}
+>
+                    Test Chapter 1
+</MenuItem>,
+                  <MenuItem
+                    disabled={true}
+                    link={false}
+                    name="chapter2"
+                    onClick={null}
+                    value={2}
+>
+                    Test Chapter 2
+</MenuItem>,
+                ],
+                <Connect(SideBarSignout)
+                  handleCloseClick={[Function]}
+/>,
+                <MenuItem
+                  link={true}
+                  name="Close Menu"
+                  onClick={[Function]}
+>
+                  <div>
+                                    <Icon
+                                                      as="i"
+                                                      name="cancel"
+                                    />
+                                    Close Menu
+                  </div>
+</MenuItem>,
+              ],
+              "direction": "left",
+              "duration": 500,
+              "inverted": true,
+              "style": Object {
+                "maxHeight": "100vh",
+                "maxWidth": "320px",
+                "minHeight": "100vh",
+                "minWidth": "320px",
+                "padding": "45px 0 0 5px",
+                "zIndex": 100,
+              },
+              "vertical": true,
+              "visible": false,
+              "width": "wide",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "chapter1",
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Test Chapter 1",
+                  "disabled": false,
+                  "link": true,
+                  "name": "chapter1",
+                  "onClick": [Function],
+                  "value": 1,
+                },
+                "ref": null,
+                "rendered": "Test Chapter 1",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "chapter2",
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Test Chapter 2",
+                  "disabled": true,
+                  "link": false,
+                  "name": "chapter2",
+                  "onClick": null,
+                  "value": 2,
+                },
+                "ref": null,
+                "rendered": "Test Chapter 2",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleCloseClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <div>
+                    <Icon
+                                        as="i"
+                                        name="cancel"
+                    />
+                    Close Menu
+</div>,
+                  "link": true,
+                  "name": "Close Menu",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Icon
+                        as="i"
+                        name="cancel"
+/>,
+                      "Close Menu",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "i",
+                        "name": "cancel",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "Close Menu",
+                  ],
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "dimmed": true,
+              "onClick": [Function],
+              "style": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

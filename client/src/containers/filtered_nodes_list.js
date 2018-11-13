@@ -1,15 +1,24 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import NodesList from '../components/nodes_list';
 
-const filtered_nodes = (nodes, chapter) => {
-  return nodes.filter((node) => { return node.chapter_id === chapter });
-};
+export const nodesProvider = (WrappedComponent = NodesList) => 
+  class extends Component {
+    static displayName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    
+    render(){
+      const { nodes, active_chapter_id } = this.props;
+      const node_list = nodes.filter(n => n.chapter_id === active_chapter_id);
+      return node_list && node_list.length ? <WrappedComponent nodes={node_list} /> : null;
+    }
+  };
 
 const mapStateToProps = (state) => ({
-  nodes: filtered_nodes(state.nodes, state.settings.active_chapter_id)
+  nodes: state.nodes,
+  active_chapter_id: state.settings.active_chapter_id
 });
 
-export default connect(
-  mapStateToProps,
-  null
-)(NodesList);
+export const connectToNodes = (WrappedComponent) =>
+  connect(mapStateToProps, null)(nodesProvider(WrappedComponent));
+  
+export default connectToNodes();
