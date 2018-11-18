@@ -1,4 +1,4 @@
-class Api::AuthenticationController < ApplicationController
+class AuthenticationController < ApplicationController
   include TokenOps
   GITHUB_CLIENT_SECRET = File.read("/run/secrets/github_client_secret")
 

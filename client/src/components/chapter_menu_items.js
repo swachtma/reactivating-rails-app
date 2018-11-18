@@ -37,7 +37,8 @@ export default class ChapterMenuItems extends Component {
           value={active_chapter.id}
           text={active_chapter.title}
           onChange={dispatchRouteChapter}
-          options={this.renderChapterOptions()} 
+          options={this.renderChapterOptions()}
+          scrolling
         />
       );
   }

@@ -1,12 +1,12 @@
-class Api::BookmarksController < ApplicationController
+class BookmarksController < ApplicationController
   before_action :authenticate_request!, only: [:index, :create]
   
   def index
-   if(bm = @current_user.bookmark)
-     render json: bm.fsa, status: 200
-   else
+  if(bm = @current_user.bookmark)
+    render json: bm.fsa, status: 200
+  else
       raise BookmarkErrors::BookmarkUnavailable
-   end
+  end
   end
   
   def create

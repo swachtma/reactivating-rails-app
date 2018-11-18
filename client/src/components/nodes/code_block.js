@@ -6,7 +6,7 @@ import CodeSection from './code_section';
 
 const styles = {
   codeBlockStyle: {
-    marginBottom: "16px"
+    margin: "1.5em 0"
   },
   blockBodyStyle: {
     padding: "10px 0",

@@ -4,13 +4,12 @@ RSpec.describe Api::NodesController, type: :controller do
       chapter = Chapter.create(title: "test run")
       chapter.nodes.create(node_type: "paragraph", content: "hello world")
       get :index
-      expect(response).to have_http_status(:success)
+      expect(response).to be_successful
       expect(JSON.parse(response.body)[0]["content"]).to eq "hello world"
     end
     
     it "raises error if node unavailable" do
       get :index
-      expect(response).to have_http_status(:success)
       expect(JSON.parse(response.body)["type"]).to eq "ERROR|FAILURE"
     end
   end

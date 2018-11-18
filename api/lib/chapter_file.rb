@@ -9,7 +9,7 @@ class ChapterFile
   public
     def save
       unless self.invalid?
-        puts "Creating chapter: #{@record.title}"
+        puts "Creating chapter: #{@record.title}" unless ENV["RAILS_ENV"] = "test"
         @record.save
       end
     end
@@ -21,7 +21,7 @@ class ChapterFile
           return false
         end
       end
-      puts "#{@file_path} removed as invalid chapter; ensure file has at least one heading."
+      puts "#{@file_path} removed as invalid chapter; ensure file has at least one heading." unless ENV["RAILS_ENV"] = "test"
       return true
     end
 end

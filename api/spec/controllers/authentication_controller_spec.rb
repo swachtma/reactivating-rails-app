@@ -38,19 +38,19 @@ RSpec.describe Api::AuthenticationController, type: :controller do
       
     it "returns a user profile on valid SHORT token" do
       get :show, params: {:token => @token}
-      expect(response).to have_http_status(:success)
+      expect(response).to be_successful
       expect(JSON.parse(response.body)).to include("id","username","github_email","token","avatar","expires")
     end
     
     it "updates expiration if token is type == SHORT" do
       get :show, params: {:token => @token}
-      expect(response).to have_http_status(:success)
+      expect(response).to be_successful
       expect(JSON.parse(response.body)["expires"]).to be > 2.days.from_now.to_i - Time.now.to_i
     end
     
     it "does not update expiration if type == LONG" do
       get :show, params: {:token => TokenOps.encode(14.days.from_now, @user, "LONG")}
-      expect(response).to have_http_status(:success)
+      expect(response).to be_successful
       expect(JSON.parse(response.body)["expires"]).to be < 15.day.from_now.to_i
     end
     

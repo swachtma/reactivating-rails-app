@@ -1,4 +1,4 @@
-class Api::NodesController < ApplicationController
+class NodesController < ApplicationController
   def index
     payload = Node.all.fsa
     raise NodeErrors::NodesUnavailable if payload.empty?
