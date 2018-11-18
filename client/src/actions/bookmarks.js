@@ -4,6 +4,6 @@ export const setBookmarkLocations = (chapter_id) => ({
   type: constants.SET_BOOKMARK_LOCATIONS, payload: {chapter: chapter_id}
 });
 
-export const setBookmarkOffered = (bool) => ({
+export const setBookmarkOffered = (bool = true) => ({
   type: constants.SET_BOOKMARK_OFFERED, payload: {prompt_shown: bool}
 });

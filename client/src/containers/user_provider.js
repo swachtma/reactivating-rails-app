@@ -4,7 +4,7 @@ import UserBadge from '../components/user_badge';
 import SideBarSignout from '../components/side_bar_signout';
 import { signalSignout } from '../actions/user';
 
- const connectToUser = (WrappedComponent) => {
+export const connectToUser = (WrappedComponent) => {
    return connect(mapStateToProps,mapDispatchToProps)(WrappedComponent);
 };
 

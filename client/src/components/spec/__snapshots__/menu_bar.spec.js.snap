@@ -1,0 +1,563 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuBar /> renders according to snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MenuBar
+    handleSidebarVisibility={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "borderless": true,
+      "children": <Container>
+        <MenuItem
+                fitted={true}
+                id="side-menu-button"
+                link={true}
+                name="Main Menu"
+        >
+                <Icon
+                        as="i"
+                        color="black"
+                        id="side-menu-icon"
+                        name="content"
+                        size="large"
+                        style={
+                                Object {
+                                        "margin": "0",
+                                      }
+                        }
+                />
+        </MenuItem>
+        <Image
+                alt="Reactivating Rails"
+                as="img"
+                fluid={true}
+                src="reactivating-rails.png"
+                style={
+                        Object {
+                                "margin": "auto 1.5em",
+                                "maxWidth": "230px",
+                                "verticalAlign": "middle",
+                              }
+                }
+                ui={true}
+                wrapped={true}
+        />
+        <MenuMenu
+                position="right"
+                value={undefined}
+        >
+                <Responsive
+                        getWidth={[Function]}
+                        minWidth={768}
+                >
+                        <ChapterMenuItems
+                                handleSidebarVisibility={[Function]}
+                        />
+                </Responsive>
+                <Connect(UserBadge)
+                        handleSidebarVisibility={[Function]}
+                />
+        </MenuMenu>
+</Container>,
+      "fixed": "top",
+      "id": "menu-bar",
+      "onClick": [Function],
+      "size": "huge",
+      "style": Object {
+        "backgroundColor": "#fff",
+        "border": "1px solid #ddd",
+        "boxShadow": "0px 3px 5px rgba(0, 0, 0, 0.2)",
+        "maxWidth": "100vw",
+        "paddingLeft": "1em",
+        "paddingRight": "1em",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <MenuItem
+            fitted={true}
+            id="side-menu-button"
+            link={true}
+            name="Main Menu"
+>
+            <Icon
+                        as="i"
+                        color="black"
+                        id="side-menu-icon"
+                        name="content"
+                        size="large"
+                        style={
+                                    Object {
+                                                "margin": "0",
+                                              }
+                        }
+            />
+</MenuItem>,
+          <Image
+            alt="Reactivating Rails"
+            as="img"
+            fluid={true}
+            src="reactivating-rails.png"
+            style={
+                        Object {
+                                    "margin": "auto 1.5em",
+                                    "maxWidth": "230px",
+                                    "verticalAlign": "middle",
+                                  }
+            }
+            ui={true}
+            wrapped={true}
+/>,
+          <MenuMenu
+            position="right"
+            value={undefined}
+>
+            <Responsive
+                        getWidth={[Function]}
+                        minWidth={768}
+            >
+                        <ChapterMenuItems
+                                    handleSidebarVisibility={[Function]}
+                        />
+            </Responsive>
+            <Connect(UserBadge)
+                        handleSidebarVisibility={[Function]}
+            />
+</MenuMenu>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Icon
+              as="i"
+              color="black"
+              id="side-menu-icon"
+              name="content"
+              size="large"
+              style={
+                            Object {
+                                          "margin": "0",
+                                        }
+              }
+/>,
+            "fitted": true,
+            "id": "side-menu-button",
+            "link": true,
+            "name": "Main Menu",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "i",
+              "color": "black",
+              "id": "side-menu-icon",
+              "name": "content",
+              "size": "large",
+              "style": Object {
+                "margin": "0",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "alt": "Reactivating Rails",
+            "as": "img",
+            "fluid": true,
+            "src": "reactivating-rails.png",
+            "style": Object {
+              "margin": "auto 1.5em",
+              "maxWidth": "230px",
+              "verticalAlign": "middle",
+            },
+            "ui": true,
+            "wrapped": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Responsive
+                getWidth={[Function]}
+                minWidth={768}
+>
+                <ChapterMenuItems
+                                handleSidebarVisibility={[Function]}
+                />
+</Responsive>,
+              <Connect(UserBadge)
+                handleSidebarVisibility={[Function]}
+/>,
+            ],
+            "position": "right",
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <ChapterMenuItems
+                  handleSidebarVisibility={[Function]}
+/>,
+                "getWidth": [Function],
+                "minWidth": 768,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "handleSidebarVisibility": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleSidebarVisibility": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "borderless": true,
+        "children": <Container>
+          <MenuItem
+                    fitted={true}
+                    id="side-menu-button"
+                    link={true}
+                    name="Main Menu"
+          >
+                    <Icon
+                              as="i"
+                              color="black"
+                              id="side-menu-icon"
+                              name="content"
+                              size="large"
+                              style={
+                                        Object {
+                                                  "margin": "0",
+                                                }
+                              }
+                    />
+          </MenuItem>
+          <Image
+                    alt="Reactivating Rails"
+                    as="img"
+                    fluid={true}
+                    src="reactivating-rails.png"
+                    style={
+                              Object {
+                                        "margin": "auto 1.5em",
+                                        "maxWidth": "230px",
+                                        "verticalAlign": "middle",
+                                      }
+                    }
+                    ui={true}
+                    wrapped={true}
+          />
+          <MenuMenu
+                    position="right"
+                    value={undefined}
+          >
+                    <Responsive
+                              getWidth={[Function]}
+                              minWidth={768}
+                    >
+                              <ChapterMenuItems
+                                        handleSidebarVisibility={[Function]}
+                              />
+                    </Responsive>
+                    <Connect(UserBadge)
+                              handleSidebarVisibility={[Function]}
+                    />
+          </MenuMenu>
+</Container>,
+        "fixed": "top",
+        "id": "menu-bar",
+        "onClick": [Function],
+        "size": "huge",
+        "style": Object {
+          "backgroundColor": "#fff",
+          "border": "1px solid #ddd",
+          "boxShadow": "0px 3px 5px rgba(0, 0, 0, 0.2)",
+          "maxWidth": "100vw",
+          "paddingLeft": "1em",
+          "paddingRight": "1em",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <MenuItem
+              fitted={true}
+              id="side-menu-button"
+              link={true}
+              name="Main Menu"
+>
+              <Icon
+                            as="i"
+                            color="black"
+                            id="side-menu-icon"
+                            name="content"
+                            size="large"
+                            style={
+                                          Object {
+                                                        "margin": "0",
+                                                      }
+                            }
+              />
+</MenuItem>,
+            <Image
+              alt="Reactivating Rails"
+              as="img"
+              fluid={true}
+              src="reactivating-rails.png"
+              style={
+                            Object {
+                                          "margin": "auto 1.5em",
+                                          "maxWidth": "230px",
+                                          "verticalAlign": "middle",
+                                        }
+              }
+              ui={true}
+              wrapped={true}
+/>,
+            <MenuMenu
+              position="right"
+              value={undefined}
+>
+              <Responsive
+                            getWidth={[Function]}
+                            minWidth={768}
+              >
+                            <ChapterMenuItems
+                                          handleSidebarVisibility={[Function]}
+                            />
+              </Responsive>
+              <Connect(UserBadge)
+                            handleSidebarVisibility={[Function]}
+              />
+</MenuMenu>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Icon
+                as="i"
+                color="black"
+                id="side-menu-icon"
+                name="content"
+                size="large"
+                style={
+                                Object {
+                                                "margin": "0",
+                                              }
+                }
+/>,
+              "fitted": true,
+              "id": "side-menu-button",
+              "link": true,
+              "name": "Main Menu",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "i",
+                "color": "black",
+                "id": "side-menu-icon",
+                "name": "content",
+                "size": "large",
+                "style": Object {
+                  "margin": "0",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "alt": "Reactivating Rails",
+              "as": "img",
+              "fluid": true,
+              "src": "reactivating-rails.png",
+              "style": Object {
+                "margin": "auto 1.5em",
+                "maxWidth": "230px",
+                "verticalAlign": "middle",
+              },
+              "ui": true,
+              "wrapped": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Responsive
+                  getWidth={[Function]}
+                  minWidth={768}
+>
+                  <ChapterMenuItems
+                                    handleSidebarVisibility={[Function]}
+                  />
+</Responsive>,
+                <Connect(UserBadge)
+                  handleSidebarVisibility={[Function]}
+/>,
+              ],
+              "position": "right",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <ChapterMenuItems
+                    handleSidebarVisibility={[Function]}
+/>,
+                  "getWidth": [Function],
+                  "minWidth": 768,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "handleSidebarVisibility": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleSidebarVisibility": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

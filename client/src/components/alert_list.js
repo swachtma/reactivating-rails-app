@@ -38,23 +38,15 @@ AlertList.propTypes = {
   alerts: array
 };
 
-function AlertList(props){
+export default function AlertList(props){
   let { scope, alerts } = props; 
   
   alerts = alerts.map((a) => {
     let ac = "alert alert-" + a.level;
     let as = Object.assign(styles.alertStyle,styles.alertLevels[a.level]);
-    return (
-      <div 
-        key={a.timestamp} 
-        children={a.message}
-        className={ac}
-        style={as} 
-      />
-    );
+    return scope === a.scope && 
+      <div key={a.timestamp} children={a.message} className={ac} style={as} />;
   });
   
   return <div className={"alert_list_" + scope}>{ alerts }</div>;
 }
-
-export default AlertList;

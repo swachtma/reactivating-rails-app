@@ -1,33 +1,25 @@
 import { connect } from 'react-redux';
 
-import BookmarkModal from '../components/bookmark_modal'
+import BookmarkModal from '../components/bookmark_modal';
 import { setBookmarkOffered } from '../actions/bookmarks';
 import { routeChapter } from '../actions/routes';
 
 export const calculateDisplayState = (state) => {
-  let bm = state.bookmarks;
+  let { prompt_shown, last_read, furthest_read } = state.bookmarks;
   let loc = state.location.payload.chapter_id;
-  if(bm.prompt_shown || (loc === bm.last_read.chapter && loc === bm.furthest_read.chapter)){
-    return false;
-  } else {
-    return true;
-  }
+  return (prompt_shown || (loc === last_read.chapter && loc === furthest_read.chapter)) ? false : true;
 };
 
-const bookmarksProvider = (WrappedComponent = BookmarkModal) => {
-  let mapStateToProps = (state) => ({
-    displayState: calculateDisplayState(state),
-    last_read: state.bookmarks.last_read,
-    furthest_read: state.bookmarks.furthest_read
-  });
-  
-  let mapDispatchToProps = (dispatch) => ({
-    dispatchSetBookmarkOffered: (bool) => dispatch(setBookmarkOffered(bool)),
-    dispatchRoutechapter: (chapter_id) => dispatch(routeChapter(chapter_id))
-  });
-  
-  return connect(mapStateToProps,mapDispatchToProps)(WrappedComponent);
-};
+const mapStateToProps = (state) => ({
+  displayState: calculateDisplayState(state),
+  last_read_id: state.bookmarks.last_read.chapter,
+  furthest_read_id: state.bookmarks.furthest_read.chapter,
+  active_chapter_id: state.settings.active_chapter_id
+});
 
-export const ConnectedBookmarkModal = bookmarksProvider();
-export default bookmarksProvider;
+const mapDispatchToProps = (dispatch) => ({
+  dispatchSetBookmarkOffered: (bool) => dispatch(setBookmarkOffered(bool)),
+  dispatchRoutechapter: (chapter_id) => dispatch(routeChapter(chapter_id))
+});
+  
+export default connect(mapStateToProps,mapDispatchToProps)(BookmarkModal);

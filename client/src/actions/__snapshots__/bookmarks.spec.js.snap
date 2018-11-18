@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`Bookmarks actionCreators setBookmarkOffered(true) matches snapshot 1`] = `
+exports[`Bookmarks actionCreators setBookmarkOffered() matches snapshot 1`] = `
 Object {
   "payload": Object {
     "prompt_shown": true,

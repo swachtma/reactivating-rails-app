@@ -1,0 +1,644 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookmarkModal /> rendering all buttons according to snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BookmarkModal
+    active_chapter_id={1}
+    dispatchRoutechapter={[Function]}
+    dispatchSetBookmarkOffered={[Function]}
+    displayState={true}
+    furthest_read_id={11}
+    last_read_id={5}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "basic": true,
+      "centered": true,
+      "children": Array [
+        <Header
+          content="Pick up where you left off"
+          icon="archive"
+/>,
+        <ModalContent>
+          <p>
+                    We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+          </p>
+</ModalContent>,
+        <ModalActions
+          style={
+                    Object {
+                              "textAlign": "center",
+                            }
+          }
+>
+          <Button
+                    as="button"
+                    basic={true}
+                    color="red"
+                    inverted={true}
+                    onClick={[Function]}
+                    role="button"
+          >
+                    <Icon
+                              as="i"
+                              name="remove"
+                    />
+                     No, stay here
+          </Button>
+          <Button
+                    as="button"
+                    color="yellow"
+                    inverted={true}
+                    onClick={[Function]}
+                    role="button"
+                    value={5}
+          >
+                    <Icon
+                              as="i"
+                              name="checkmark"
+                    />
+                     Last read (Ch: 
+                    5
+                    )
+          </Button>
+          <Button
+                    as="button"
+                    color="green"
+                    inverted={true}
+                    onClick={[Function]}
+                    role="button"
+                    value={11}
+          >
+                    <Icon
+                              as="i"
+                              name="checkmark"
+                    />
+                     Furthest read (Ch: 
+                    11
+                    )
+          </Button>
+</ModalActions>,
+      ],
+      "closeOnDimmerClick": true,
+      "closeOnDocumentClick": false,
+      "dimmer": true,
+      "eventPool": "Modal",
+      "onClose": [Function],
+      "open": true,
+      "size": "small",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "content": "Pick up where you left off",
+          "icon": "archive",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <p>
+            We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+</p>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?",
+          },
+          "ref": null,
+          "rendered": "We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?",
+          "type": "p",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Button
+              as="button"
+              basic={true}
+              color="red"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
+>
+              <Icon
+                            as="i"
+                            name="remove"
+              />
+               No, stay here
+</Button>,
+            <Button
+              as="button"
+              color="yellow"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
+              value={5}
+>
+              <Icon
+                            as="i"
+                            name="checkmark"
+              />
+               Last read (Ch: 
+              5
+              )
+</Button>,
+            <Button
+              as="button"
+              color="green"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
+              value={11}
+>
+              <Icon
+                            as="i"
+                            name="checkmark"
+              />
+               Furthest read (Ch: 
+              11
+              )
+</Button>,
+          ],
+          "style": Object {
+            "textAlign": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "basic": true,
+              "children": Array [
+                <Icon
+                  as="i"
+                  name="remove"
+/>,
+                " No, stay here",
+              ],
+              "color": "red",
+              "inverted": true,
+              "onClick": [Function],
+              "role": "button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "remove",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " No, stay here",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "children": Array [
+                <Icon
+                  as="i"
+                  name="checkmark"
+/>,
+                " Last read (Ch: ",
+                5,
+                ")",
+              ],
+              "color": "yellow",
+              "inverted": true,
+              "onClick": [Function],
+              "role": "button",
+              "value": 5,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "checkmark",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " Last read (Ch: ",
+              5,
+              ")",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "children": Array [
+                <Icon
+                  as="i"
+                  name="checkmark"
+/>,
+                " Furthest read (Ch: ",
+                11,
+                ")",
+              ],
+              "color": "green",
+              "inverted": true,
+              "onClick": [Function],
+              "role": "button",
+              "value": 11,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "checkmark",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " Furthest read (Ch: ",
+              11,
+              ")",
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "basic": true,
+        "centered": true,
+        "children": Array [
+          <Header
+            content="Pick up where you left off"
+            icon="archive"
+/>,
+          <ModalContent>
+            <p>
+                        We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+            </p>
+</ModalContent>,
+          <ModalActions
+            style={
+                        Object {
+                                    "textAlign": "center",
+                                  }
+            }
+>
+            <Button
+                        as="button"
+                        basic={true}
+                        color="red"
+                        inverted={true}
+                        onClick={[Function]}
+                        role="button"
+            >
+                        <Icon
+                                    as="i"
+                                    name="remove"
+                        />
+                         No, stay here
+            </Button>
+            <Button
+                        as="button"
+                        color="yellow"
+                        inverted={true}
+                        onClick={[Function]}
+                        role="button"
+                        value={5}
+            >
+                        <Icon
+                                    as="i"
+                                    name="checkmark"
+                        />
+                         Last read (Ch: 
+                        5
+                        )
+            </Button>
+            <Button
+                        as="button"
+                        color="green"
+                        inverted={true}
+                        onClick={[Function]}
+                        role="button"
+                        value={11}
+            >
+                        <Icon
+                                    as="i"
+                                    name="checkmark"
+                        />
+                         Furthest read (Ch: 
+                        11
+                        )
+            </Button>
+</ModalActions>,
+        ],
+        "closeOnDimmerClick": true,
+        "closeOnDocumentClick": false,
+        "dimmer": true,
+        "eventPool": "Modal",
+        "onClose": [Function],
+        "open": true,
+        "size": "small",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "content": "Pick up where you left off",
+            "icon": "archive",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <p>
+              We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+</p>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?",
+            },
+            "ref": null,
+            "rendered": "We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?",
+            "type": "p",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Button
+                as="button"
+                basic={true}
+                color="red"
+                inverted={true}
+                onClick={[Function]}
+                role="button"
+>
+                <Icon
+                                as="i"
+                                name="remove"
+                />
+                 No, stay here
+</Button>,
+              <Button
+                as="button"
+                color="yellow"
+                inverted={true}
+                onClick={[Function]}
+                role="button"
+                value={5}
+>
+                <Icon
+                                as="i"
+                                name="checkmark"
+                />
+                 Last read (Ch: 
+                5
+                )
+</Button>,
+              <Button
+                as="button"
+                color="green"
+                inverted={true}
+                onClick={[Function]}
+                role="button"
+                value={11}
+>
+                <Icon
+                                as="i"
+                                name="checkmark"
+                />
+                 Furthest read (Ch: 
+                11
+                )
+</Button>,
+            ],
+            "style": Object {
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "basic": true,
+                "children": Array [
+                  <Icon
+                    as="i"
+                    name="remove"
+/>,
+                  " No, stay here",
+                ],
+                "color": "red",
+                "inverted": true,
+                "onClick": [Function],
+                "role": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "i",
+                    "name": "remove",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " No, stay here",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "children": Array [
+                  <Icon
+                    as="i"
+                    name="checkmark"
+/>,
+                  " Last read (Ch: ",
+                  5,
+                  ")",
+                ],
+                "color": "yellow",
+                "inverted": true,
+                "onClick": [Function],
+                "role": "button",
+                "value": 5,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "i",
+                    "name": "checkmark",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Last read (Ch: ",
+                5,
+                ")",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "children": Array [
+                  <Icon
+                    as="i"
+                    name="checkmark"
+/>,
+                  " Furthest read (Ch: ",
+                  11,
+                  ")",
+                ],
+                "color": "green",
+                "inverted": true,
+                "onClick": [Function],
+                "role": "button",
+                "value": 11,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "i",
+                    "name": "checkmark",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Furthest read (Ch: ",
+                11,
+                ")",
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

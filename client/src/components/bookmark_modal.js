@@ -1,53 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { func, bool, number } from 'prop-types';
 import { Button, Header, Icon, Modal } from 'semantic-ui-react';
 
-const modalPosition = {top: "40%"}
+const styles = {center: { textAlign: "center" }};
 
-class BookmarkModal extends Component {
-  handleClose = () => this.props.dispatchSetBookmarkOffered(true);
+BookmarkModal.propTypes = {
+  dispatchRoutechapter: func,
+  dispatchSetBookmarkOffered: func,
+  displayState: bool,
+  last_read_id: number,
+  furthest_read_id: number,
+  active_chapter_id: number
+};
+
+export default function BookmarkModal(props) {
+  const { displayState, dispatchRoutechapter, dispatchSetBookmarkOffered,
+    furthest_read_id, active_chapter_id, last_read_id } = props;
   
-  handleLastReadClick = () => {
-    this.handleClose();
-    this.props.dispatchRoutechapter(this.props.last_read.chapter);
-  }
+  const manageResponse = (e,data) => {
+    dispatchSetBookmarkOffered();
+    data.value && dispatchRoutechapter(data.value);
+  };
   
-  handleFurthestReadClick = () => {
-    this.handleClose();
-    this.props.dispatchRoutechapter(this.props.furthest_read.chapter);
-  }
-  
-  printLastReadButtonIf = (truthy) => {
-    if(truthy){
-      return (
-        <Button color='yellow' onClick={this.handleLastReadClick} inverted>
-          <Icon name='checkmark' /> Last read (Ch:{this.props.last_read.chapter})
+  return(
+    <Modal open={displayState} onClose={dispatchSetBookmarkOffered} basic size='small'>
+      <Header icon='archive' content='Pick up where you left off' />
+      <Modal.Content>
+        <p>
+          We've saved some bookmarks on your behalf.
+          Would you like to resume reading at one of these locations?
+        </p>
+      </Modal.Content>
+      <Modal.Actions style={styles.center}>
+        <Button basic color='red' onClick={manageResponse} inverted>
+          <Icon name='remove' /> No, stay here
         </Button>
-      );
-    }
-  }
-  
-  render(){
-    let last_read = this.props.last_read.chapter;
-    let furthest_read = this.props.furthest_read.chapter;
-    
-    return(
-      <Modal open={this.props.displayState} onClose={this.handleClose} basic size='small' style={modalPosition}>
-        <Header icon='archive' content='Pick up where you left off' />
-        <Modal.Content>
-          <p>We've saved some bookmarks on your behalf.  Would you like to resume reading at one of these locations?</p>
-        </Modal.Content>
-        <Modal.Actions style={{textAlign: "center"}}>
-          <Button basic color='red' onClick={this.handleClose} inverted>
-            <Icon name='remove' /> No, stay here
-          </Button>
-          { this.printLastReadButtonIf(last_read !== furthest_read) }
-          <Button color='green' onClick={this.handleFurthestReadClick} inverted>
-            <Icon name='checkmark' /> Furthest read (Ch:{furthest_read})
-          </Button>
-        </Modal.Actions>
-      </Modal>
-    );
-  }
+        
+        {last_read_id !== furthest_read_id && active_chapter_id !== last_read_id &&
+        <Button color='yellow' value={last_read_id} onClick={manageResponse} inverted>
+          <Icon name='checkmark' /> Last read (Ch: {last_read_id})
+        </Button>}
+        
+        <Button color='green' value={furthest_read_id} onClick={manageResponse} inverted>
+          <Icon name='checkmark' /> Furthest read (Ch: {furthest_read_id})
+        </Button>
+      </Modal.Actions>
+    </Modal>
+  );
 }
-
-export default BookmarkModal;

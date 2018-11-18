@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import MenuBar from './menu_bar';
 import SideBarPopout from './side_bar_popout';
 
-class NavigationMenus extends Component {
-  constructor(props){
-    super(props);
-    this.sideBarRef = React.createRef();
-  }
+export default function NavigationMenus(props){
+  const sideBarRef = React.createRef();
   
-  handleSidebarVisibility = (e,t) => {
-    let tgl = this.sideBarRef.current.toggleVisibility;
-    ["sideMenuIcon","sideMenuButton"].includes(e.target.id) ? tgl() : tgl(false);
+  const handleSidebarVisibility = (e,t) => {
+    let tgl = sideBarRef.current.toggleVisibility;
+    ["side-menu-button","side-menu-icon"].includes(e.target.id) ? tgl() : tgl(false);
   };
   
-  render() {
-    return [
-        <SideBarPopout ref={this.sideBarRef} {...this.props} key="sidebar" />,
-        <MenuBar handleSidebarVisibility={this.handleSidebarVisibility} {...this.props} key="menubar" />
-    ];
-  }
+  return [
+    <SideBarPopout ref={sideBarRef} {...props} key="sidebar" />,
+    <MenuBar handleSidebarVisibility={handleSidebarVisibility} {...props} key="menubar" />
+  ];
 }
-
-export default NavigationMenus;

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChapterMenuItems /> renders according to snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ChapterMenuItems
+    active_chapter={
+        Object {
+            "id": 2,
+            "title": "Test Chapter 1",
+          }
+    }
+    chapters={
+        Array [
+            Object {
+              "id": 1,
+              "title": "Test Chapter 1",
+            },
+            Object {
+              "id": 2,
+              "title": "Test Chapter 2",
+            },
+          ]
+    }
+    dispatchRouteChapter={[Function]}
+    handleSidebarVisibility={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "additionLabel": "Add ",
+      "additionPosition": "top",
+      "className": "link item",
+      "closeOnBlur": true,
+      "deburr": false,
+      "icon": "dropdown",
+      "minCharacters": 1,
+      "noResultsMessage": "No results found.",
+      "onChange": [Function],
+      "onFocus": [Function],
+      "openOnFocus": true,
+      "options": Array [
+        Object {
+          "active": false,
+          "id": "chapter_menu_item_1",
+          "key": "chapter_1",
+          "text": "Test Chapter 1",
+          "value": 1,
+        },
+        Object {
+          "active": true,
+          "id": "chapter_menu_item_2",
+          "key": "chapter_2",
+          "text": "Test Chapter 2",
+          "value": 2,
+        },
+      ],
+      "placeholder": "Jump to Chapter...",
+      "pointing": "top right",
+      "renderLabel": [Function],
+      "searchInput": "text",
+      "selectOnBlur": false,
+      "selectOnNavigation": false,
+      "style": Object {
+        "margin": "0 1em",
+      },
+      "tabIndex": "1",
+      "text": "Test Chapter 1",
+      "value": 2,
+      "wrapSelection": true,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "additionLabel": "Add ",
+        "additionPosition": "top",
+        "className": "link item",
+        "closeOnBlur": true,
+        "deburr": false,
+        "icon": "dropdown",
+        "minCharacters": 1,
+        "noResultsMessage": "No results found.",
+        "onChange": [Function],
+        "onFocus": [Function],
+        "openOnFocus": true,
+        "options": Array [
+          Object {
+            "active": false,
+            "id": "chapter_menu_item_1",
+            "key": "chapter_1",
+            "text": "Test Chapter 1",
+            "value": 1,
+          },
+          Object {
+            "active": true,
+            "id": "chapter_menu_item_2",
+            "key": "chapter_2",
+            "text": "Test Chapter 2",
+            "value": 2,
+          },
+        ],
+        "placeholder": "Jump to Chapter...",
+        "pointing": "top right",
+        "renderLabel": [Function],
+        "searchInput": "text",
+        "selectOnBlur": false,
+        "selectOnNavigation": false,
+        "style": Object {
+          "margin": "0 1em",
+        },
+        "tabIndex": "1",
+        "text": "Test Chapter 1",
+        "value": 2,
+        "wrapSelection": true,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

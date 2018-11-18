@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { string, func } from 'prop-types';
 import { Menu, Icon } from 'semantic-ui-react';
 
-const styles = {signout: {color: "#cc0000"}}
+const styles = {signout: {color: "#cc0000"}};
 
-class SideBarSignout extends Component {
-  handleSignout = () => {
-    this.props.handleCloseClick();
-    this.props.dispatchSignalSignout();
+SideBarSignout.propTypes = {
+  username: string,
+  handleCloseClick: func,
+  dispatchSignalSignout: func
+};
+
+export default function SideBarSignout(props){
+  let { username, handleCloseClick, dispatchSignalSignout } = props;
+  
+  const handleSignout = () => {
+    handleCloseClick();
+    dispatchSignalSignout();
   };
   
-  render() {
-    let { username } = this.props;
-    if(username){
-      return (
-        <Menu.Item link={true} onClick={this.handleSignout} name='Sign Out'>
-          <div style={styles.signout}><Icon name='cancel' />Sign Out</div>
-        </Menu.Item>
-      );
-    } else {
-      return null;
-    }
-  }
+  return username ?
+    <Menu.Item link={true} onClick={handleSignout} name='Sign Out'>
+      <div style={styles.signout}><Icon name='cancel' />Sign Out</div>
+    </Menu.Item> : null;
 }
-
-export default SideBarSignout;

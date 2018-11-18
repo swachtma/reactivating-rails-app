@@ -8,9 +8,9 @@ describe("Bookmarks actionCreators", ()=>{
     });
   });
   
-  describe("setBookmarkOffered(true)",()=>{
+  describe("setBookmarkOffered()",()=>{
     test("matches snapshot", () =>{
-      expect(actions.setBookmarkOffered(true)).toMatchSnapshot();
+      expect(actions.setBookmarkOffered()).toMatchSnapshot();
     });
   });
 });

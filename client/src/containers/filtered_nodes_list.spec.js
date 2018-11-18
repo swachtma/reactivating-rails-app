@@ -10,7 +10,7 @@ let defaultProps = {
   nodes: [
     {id: 1, chapter_id: 1, node_type: "header", content: "Node 1"},
     {id: 2, chapter_id: 1, node_type: "paragraph", content: "Node 2"},  
-    {id: 3, chapter_id: 2, node_type: "header", content: "Node 3"},  
+    {id: 3, chapter_id: 2, node_type: "header", content: "Node 3"}  
   ]
 };
 
