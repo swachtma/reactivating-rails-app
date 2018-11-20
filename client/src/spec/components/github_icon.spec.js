@@ -1,10 +1,9 @@
 /* global expect, jest */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import config from '../../test_helper';
-import GithubIcon from '../../components/github_icon';
+import configEnzyme from '../../test_helper'
+import GithubIcon from '../../components/github_icon'
 
 let test_props = {
   location: {
@@ -26,10 +25,10 @@ let test_props = {
       ERROR_ROUTE: '/error'
     }
   }
-};
+}
 
-let w = shallow(<GithubIcon {...test_props} />);
+let w = shallow(<GithubIcon {...test_props} />)
 
-describe("<GithubIcon /> renders",()=>{
-  it("according to snapshot", () => expect(w).toMatchSnapshot());
-});
+describe('<GithubIcon /> renders', () => {
+  it('according to snapshot', () => expect(w).toMatchSnapshot())
+})

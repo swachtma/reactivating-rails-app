@@ -6,6 +6,8 @@
   "dependencies": {
     "axios": "0.18.0",
     "clipboard": "^2.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "history": "^4.7.2",
     "markdown-it": "^8.4.2",
     "react": "^16.4.2",
@@ -26,10 +28,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "node_modules/eslint/bin/eslint.js src"
   },
   "devDependencies": {
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }

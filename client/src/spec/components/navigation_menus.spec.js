@@ -1,13 +1,12 @@
 /* global expect, jest */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import config from '../../test_helper';
-import NavigationMenus from '../../components/navigation_menus';
+import configEnzyme from '../../test_helper'
+import NavigationMenus from '../../components/navigation_menus'
 
-let w = shallow(<NavigationMenus />);
+let w = shallow(<NavigationMenus />)
 
-describe("<NavigationMenus />",()=>{
-  it("renders according to snapshot", () => expect(w).toMatchSnapshot());
-});
+describe('<NavigationMenus />', () => {
+  it('renders according to snapshot', () => expect(w).toMatchSnapshot())
+})

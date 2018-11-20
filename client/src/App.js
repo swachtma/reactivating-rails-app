@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
+import React, { Component } from 'react'
+import { Container } from 'semantic-ui-react'
 import './App.css'
 
-import routerProvider from './containers/route_provider';
-import connectToAlerts from './containers/alert_provider';
-import { ConnectedNavigationMenus } from './containers/chapter_provider';
-const ConnectedRouterSwitch = routerProvider();
-const ApplicationAlerts = connectToAlerts();
-
+import routerProvider from './containers/route_provider'
+import connectToAlerts from './containers/alert_provider'
+import { ConnectedNavigationMenus } from './containers/chapter_provider'
+const ConnectedRouterSwitch = routerProvider()
+const ApplicationAlerts = connectToAlerts()
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div id="app">
         <ConnectedNavigationMenus />
@@ -19,8 +18,8 @@ class App extends Component {
           <ConnectedRouterSwitch />
         </Container>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

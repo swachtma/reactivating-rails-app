@@ -1,26 +1,26 @@
-import React from 'react';
-import { object, string, shape } from 'prop-types';
-import { Menu, Icon } from 'semantic-ui-react';
+import React from 'react'
+import { object, string, shape } from 'prop-types'
+import { Menu, Icon } from 'semantic-ui-react'
 
-import { BASE_AUTH_PATH } from '../constants/settings';
+import { BASE_AUTH_PATH } from '../constants/settings'
 
 const styles = {
-  githubIcon: {marginRight: 0}
-};
+  githubIcon: { marginRight: 0 }
+}
 
 GithubIcon.propTypes = {
-  location: shape({type: string, payload: object})
-};
+  location: shape({ type: string, payload: object })
+}
 
-export default function GithubIcon(props) {
-  const { location } = props;
-  const base_path = "https://github.com/login/oauth/authorize?client_id=a86bc65853ae65d3be52&redirect_uri=";
-  const bounce_path = JSON.stringify({type: location.type, payload: location.payload});
-  const rd = encodeURIComponent(BASE_AUTH_PATH + "?bounce_path=" + bounce_path);
-  
+export default function GithubIcon (props) {
+  const { location } = props
+  const base_path = 'https://github.com/login/oauth/authorize?client_id=a86bc65853ae65d3be52&redirect_uri='
+  const bounce_path = JSON.stringify({ type: location.type, payload: location.payload })
+  const rd = encodeURIComponent(BASE_AUTH_PATH + '?bounce_path=' + bounce_path)
+
   return (
     <Menu.Item href={base_path + rd} name='Sign in with GitHub' fitted>
       <Icon name='github' style={styles.githubIcon} size="big" />
     </Menu.Item>
-  );
+  )
 }

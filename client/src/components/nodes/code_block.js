@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { shape, number, string, array, func } from 'prop-types';
+import React, { Component } from 'react'
+import { shape, number, string, array, func } from 'prop-types'
 
-import CodeHeader from './code_header';
-import CodeSection from './code_section';
+import CodeHeader from './code_header'
+import CodeSection from './code_section'
 
 const styles = {
   codeBlockStyle: {
-    margin: "1.5em 0"
+    margin: '1.5em 0'
   },
   blockBodyStyle: {
-    padding: "10px 0",
-    border: "1px solid #021a40",
-    backgroundColor: "#F0F0F0",
-    overflowX: "scroll"
+    padding: '10px 0',
+    border: '1px solid #021a40',
+    backgroundColor: '#F0F0F0',
+    overflowX: 'scroll'
   }
-};
+}
 
 export default class CodeBlock extends Component {
   static propTypes = {
@@ -27,28 +27,28 @@ export default class CodeBlock extends Component {
   };
 
   renderCodeSections = () => {
-    let { addSectionRef, node } = this.props;
-    return Array.from(node.sections, s => 
-      <CodeSection ref={addSectionRef} block_type={node.block_type} 
-      priority={s.priority} contents={s.contents} key={s.section_id} section_id={s.section_id} />
-    );
+    let { addSectionRef, node } = this.props
+    return Array.from(node.sections, s =>
+      <CodeSection ref={addSectionRef} block_type={node.block_type}
+        priority={s.priority} contents={s.contents} key={s.section_id} section_id={s.section_id} />
+    )
   };
-  
-  render() {
-    let { collapseSections, attachCopyTrigger, node } = this.props;
-    let { node_id, block_type, block_path } = node;
+
+  render () {
+    let { collapseSections, attachCopyTrigger, node } = this.props
+    let { node_id, block_type, block_path } = node
 
     return (
-      <div style={styles.codeBlockStyle} key={"code_fence_" + node_id}
-      id={"code_block_" + node_id} className={"language-" + block_type}>
-        { block_path && 
+      <div style={styles.codeBlockStyle} key={'code_fence_' + node_id}
+        id={'code_block_' + node_id} className={'language-' + block_type}>
+        { block_path &&
           <CodeHeader block_path={block_path} collapseHandler={collapseSections}
-          triggerRef={attachCopyTrigger} /> 
-        } 
+            triggerRef={attachCopyTrigger} />
+        }
         <div style={styles.blockBodyStyle}>
           { this.renderCodeSections() }
         </div>
       </div>
-    );
+    )
   }
 }
