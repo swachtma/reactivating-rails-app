@@ -4,7 +4,8 @@ services:
   api:
     build: 
       context: .
-      dockerfile: ./.docker/ApiDockerfile
+      dockerfile: ./.docker
+      target: api-dev
     container_name: api
     ports: 
       - 3000:3000
@@ -23,7 +24,8 @@ services:
   client:
     build:
       context: .
-      dockerfile: ./.docker/ClientDockerfile
+      dockerfile: ./.docker
+      target: client-dev
     container_name: client
     ports:
       - 80:3000
