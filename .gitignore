@@ -35,9 +35,6 @@
 # testing
 /client/coverage
 
-# production
-/client/build
-
 # Jest cache
 client/jest_0/
 
