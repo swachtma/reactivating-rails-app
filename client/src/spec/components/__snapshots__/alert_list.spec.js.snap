@@ -5,23 +5,23 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AlertList
     alerts={
-        Array [
-            Object {
-              "level": "warning",
-              "message": "Sign out successful",
-              "scope": "application",
-              "timestamp": 1529324313949,
-            },
-            Object {
-              "level": "danger",
-              "message": "Cylons are among us",
-              "scope": "battlestar",
-              "timestamp": 1529324313939,
-            },
-          ]
+      Array [
+        Object {
+          "level": "warning",
+          "message": "Sign out successful",
+          "scope": "application",
+          "timestamp": 1529324313949,
+        },
+        Object {
+          "level": "danger",
+          "message": "Cylons are among us",
+          "scope": "battlestar",
+          "timestamp": 1529324313939,
+        },
+      ]
     }
     scope="application"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -39,19 +39,19 @@ ShallowWrapper {
         <div
           className="alert alert-warning"
           style={
-                    Object {
-                              "backgroundColor": "#f2dede",
-                              "border": "1px solid transparent",
-                              "borderColor": "#ebccd1",
-                              "borderRadius": "4px",
-                              "color": "#a94442",
-                              "marginBottom": "20px",
-                              "padding": "15px",
-                            }
+            Object {
+              "backgroundColor": "#f2dede",
+              "border": "1px solid transparent",
+              "borderColor": "#ebccd1",
+              "borderRadius": "4px",
+              "color": "#a94442",
+              "marginBottom": "20px",
+              "padding": "15px",
+            }
           }
->
+        >
           Sign out successful
-</div>,
+        </div>,
         false,
       ],
       "className": "alert_list_application",
@@ -93,19 +93,19 @@ ShallowWrapper {
           <div
             className="alert alert-warning"
             style={
-                        Object {
-                                    "backgroundColor": "#f2dede",
-                                    "border": "1px solid transparent",
-                                    "borderColor": "#ebccd1",
-                                    "borderRadius": "4px",
-                                    "color": "#a94442",
-                                    "marginBottom": "20px",
-                                    "padding": "15px",
-                                  }
+              Object {
+                "backgroundColor": "#f2dede",
+                "border": "1px solid transparent",
+                "borderColor": "#ebccd1",
+                "borderRadius": "4px",
+                "color": "#a94442",
+                "marginBottom": "20px",
+                "padding": "15px",
+              }
             }
->
+          >
             Sign out successful
-</div>,
+          </div>,
           false,
         ],
         "className": "alert_list_application",

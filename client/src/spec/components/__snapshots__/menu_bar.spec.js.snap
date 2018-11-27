@@ -4,8 +4,8 @@ exports[`<MenuBar /> renders according to snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MenuBar
-    handleSidebarVisibility={[Function]}
-/>,
+    handleSidebarVisibility={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,59 +22,58 @@ ShallowWrapper {
       "borderless": true,
       "children": <Container>
         <MenuItem
-                fitted={true}
-                id="side-menu-button"
-                link={true}
-                name="Main Menu"
+          fitted={true}
+          id="side-menu-button"
+          link={true}
+          name="Main Menu"
         >
-                <Icon
-                        as="i"
-                        color="black"
-                        id="side-menu-icon"
-                        name="content"
-                        size="large"
-                        style={
-                                Object {
-                                        "margin": "0",
-                                      }
-                        }
-                />
+          <Icon
+            as="i"
+            color="black"
+            id="side-menu-icon"
+            name="content"
+            size="large"
+            style={
+              Object {
+                "margin": "0",
+              }
+            }
+          />
         </MenuItem>
         <Image
-                alt="Reactivating Rails"
-                as="img"
-                fluid={true}
-                src="reactivating-rails.png"
-                style={
-                        Object {
-                                "margin": "auto 1.5em",
-                                "maxWidth": "230px",
-                                "verticalAlign": "middle",
-                              }
-                }
-                ui={true}
-                wrapped={true}
+          alt="Reactivating Rails"
+          as="img"
+          fluid={true}
+          src="reactivating-rails.png"
+          style={
+            Object {
+              "margin": "auto 1.5em",
+              "maxWidth": "230px",
+              "verticalAlign": "middle",
+            }
+          }
+          ui={true}
+          wrapped={true}
         />
         <MenuMenu
-                position="right"
-                value={undefined}
+          position="right"
         >
-                <Responsive
-                        getWidth={[Function]}
-                        minWidth={768}
-                >
-                        <ChapterMenuItems
-                                handleSidebarVisibility={[Function]}
-                        />
-                </Responsive>
-                <Connect(UserBadge)
-                        handleSidebarVisibility={[Function]}
-                />
+          <Responsive
+            getWidth={[Function]}
+            minWidth={768}
+          >
+            <ChapterMenuItems
+              handleSidebarVisibility={[MockFunction]}
+            />
+          </Responsive>
+          <Connect(UserBadge)
+            handleSidebarVisibility={[MockFunction]}
+          />
         </MenuMenu>
-</Container>,
+      </Container>,
       "fixed": "top",
       "id": "menu-bar",
-      "onClick": [Function],
+      "onClick": [MockFunction],
       "size": "huge",
       "style": Object {
         "backgroundColor": "#fff",
@@ -97,51 +96,50 @@ ShallowWrapper {
             id="side-menu-button"
             link={true}
             name="Main Menu"
->
+          >
             <Icon
-                        as="i"
-                        color="black"
-                        id="side-menu-icon"
-                        name="content"
-                        size="large"
-                        style={
-                                    Object {
-                                                "margin": "0",
-                                              }
-                        }
+              as="i"
+              color="black"
+              id="side-menu-icon"
+              name="content"
+              size="large"
+              style={
+                Object {
+                  "margin": "0",
+                }
+              }
             />
-</MenuItem>,
+          </MenuItem>,
           <Image
             alt="Reactivating Rails"
             as="img"
             fluid={true}
             src="reactivating-rails.png"
             style={
-                        Object {
-                                    "margin": "auto 1.5em",
-                                    "maxWidth": "230px",
-                                    "verticalAlign": "middle",
-                                  }
+              Object {
+                "margin": "auto 1.5em",
+                "maxWidth": "230px",
+                "verticalAlign": "middle",
+              }
             }
             ui={true}
             wrapped={true}
-/>,
+          />,
           <MenuMenu
             position="right"
-            value={undefined}
->
+          >
             <Responsive
-                        getWidth={[Function]}
-                        minWidth={768}
+              getWidth={[Function]}
+              minWidth={768}
             >
-                        <ChapterMenuItems
-                                    handleSidebarVisibility={[Function]}
-                        />
+              <ChapterMenuItems
+                handleSidebarVisibility={[MockFunction]}
+              />
             </Responsive>
             <Connect(UserBadge)
-                        handleSidebarVisibility={[Function]}
+              handleSidebarVisibility={[MockFunction]}
             />
-</MenuMenu>,
+          </MenuMenu>,
         ],
       },
       "ref": null,
@@ -158,11 +156,11 @@ ShallowWrapper {
               name="content"
               size="large"
               style={
-                            Object {
-                                          "margin": "0",
-                                        }
+                Object {
+                  "margin": "0",
+                }
               }
-/>,
+            />,
             "fitted": true,
             "id": "side-menu-button",
             "link": true,
@@ -219,14 +217,14 @@ ShallowWrapper {
               <Responsive
                 getWidth={[Function]}
                 minWidth={768}
->
+              >
                 <ChapterMenuItems
-                                handleSidebarVisibility={[Function]}
+                  handleSidebarVisibility={[MockFunction]}
                 />
-</Responsive>,
+              </Responsive>,
               <Connect(UserBadge)
-                handleSidebarVisibility={[Function]}
-/>,
+                handleSidebarVisibility={[MockFunction]}
+              />,
             ],
             "position": "right",
             "value": undefined,
@@ -239,8 +237,8 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": <ChapterMenuItems
-                  handleSidebarVisibility={[Function]}
-/>,
+                  handleSidebarVisibility={[MockFunction]}
+                />,
                 "getWidth": [Function],
                 "minWidth": 768,
               },
@@ -250,7 +248,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "handleSidebarVisibility": [Function],
+                  "handleSidebarVisibility": [MockFunction],
                 },
                 "ref": null,
                 "rendered": null,
@@ -263,7 +261,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "handleSidebarVisibility": [Function],
+                "handleSidebarVisibility": [MockFunction],
               },
               "ref": null,
               "rendered": null,
@@ -286,59 +284,58 @@ ShallowWrapper {
         "borderless": true,
         "children": <Container>
           <MenuItem
-                    fitted={true}
-                    id="side-menu-button"
-                    link={true}
-                    name="Main Menu"
+            fitted={true}
+            id="side-menu-button"
+            link={true}
+            name="Main Menu"
           >
-                    <Icon
-                              as="i"
-                              color="black"
-                              id="side-menu-icon"
-                              name="content"
-                              size="large"
-                              style={
-                                        Object {
-                                                  "margin": "0",
-                                                }
-                              }
-                    />
+            <Icon
+              as="i"
+              color="black"
+              id="side-menu-icon"
+              name="content"
+              size="large"
+              style={
+                Object {
+                  "margin": "0",
+                }
+              }
+            />
           </MenuItem>
           <Image
-                    alt="Reactivating Rails"
-                    as="img"
-                    fluid={true}
-                    src="reactivating-rails.png"
-                    style={
-                              Object {
-                                        "margin": "auto 1.5em",
-                                        "maxWidth": "230px",
-                                        "verticalAlign": "middle",
-                                      }
-                    }
-                    ui={true}
-                    wrapped={true}
+            alt="Reactivating Rails"
+            as="img"
+            fluid={true}
+            src="reactivating-rails.png"
+            style={
+              Object {
+                "margin": "auto 1.5em",
+                "maxWidth": "230px",
+                "verticalAlign": "middle",
+              }
+            }
+            ui={true}
+            wrapped={true}
           />
           <MenuMenu
-                    position="right"
-                    value={undefined}
+            position="right"
           >
-                    <Responsive
-                              getWidth={[Function]}
-                              minWidth={768}
-                    >
-                              <ChapterMenuItems
-                                        handleSidebarVisibility={[Function]}
-                              />
-                    </Responsive>
-                    <Connect(UserBadge)
-                              handleSidebarVisibility={[Function]}
-                    />
+            <Responsive
+              getWidth={[Function]}
+              minWidth={768}
+            >
+              <ChapterMenuItems
+                handleSidebarVisibility={[MockFunction]}
+              />
+            </Responsive>
+            <Connect(UserBadge)
+              handleSidebarVisibility={[MockFunction]}
+            />
           </MenuMenu>
-</Container>,
+        </Container>,
         "fixed": "top",
         "id": "menu-bar",
-        "onClick": [Function],
+        "onClick": [MockFunction],
         "size": "huge",
         "style": Object {
           "backgroundColor": "#fff",
@@ -361,51 +358,50 @@ ShallowWrapper {
               id="side-menu-button"
               link={true}
               name="Main Menu"
->
+            >
               <Icon
-                            as="i"
-                            color="black"
-                            id="side-menu-icon"
-                            name="content"
-                            size="large"
-                            style={
-                                          Object {
-                                                        "margin": "0",
-                                                      }
-                            }
+                as="i"
+                color="black"
+                id="side-menu-icon"
+                name="content"
+                size="large"
+                style={
+                  Object {
+                    "margin": "0",
+                  }
+                }
               />
-</MenuItem>,
+            </MenuItem>,
             <Image
               alt="Reactivating Rails"
               as="img"
               fluid={true}
               src="reactivating-rails.png"
               style={
-                            Object {
-                                          "margin": "auto 1.5em",
-                                          "maxWidth": "230px",
-                                          "verticalAlign": "middle",
-                                        }
+                Object {
+                  "margin": "auto 1.5em",
+                  "maxWidth": "230px",
+                  "verticalAlign": "middle",
+                }
               }
               ui={true}
               wrapped={true}
-/>,
+            />,
             <MenuMenu
               position="right"
-              value={undefined}
->
+            >
               <Responsive
-                            getWidth={[Function]}
-                            minWidth={768}
+                getWidth={[Function]}
+                minWidth={768}
               >
-                            <ChapterMenuItems
-                                          handleSidebarVisibility={[Function]}
-                            />
+                <ChapterMenuItems
+                  handleSidebarVisibility={[MockFunction]}
+                />
               </Responsive>
               <Connect(UserBadge)
-                            handleSidebarVisibility={[Function]}
+                handleSidebarVisibility={[MockFunction]}
               />
-</MenuMenu>,
+            </MenuMenu>,
           ],
         },
         "ref": null,
@@ -422,11 +418,11 @@ ShallowWrapper {
                 name="content"
                 size="large"
                 style={
-                                Object {
-                                                "margin": "0",
-                                              }
+                  Object {
+                    "margin": "0",
+                  }
                 }
-/>,
+              />,
               "fitted": true,
               "id": "side-menu-button",
               "link": true,
@@ -483,14 +479,14 @@ ShallowWrapper {
                 <Responsive
                   getWidth={[Function]}
                   minWidth={768}
->
+                >
                   <ChapterMenuItems
-                                    handleSidebarVisibility={[Function]}
+                    handleSidebarVisibility={[MockFunction]}
                   />
-</Responsive>,
+                </Responsive>,
                 <Connect(UserBadge)
-                  handleSidebarVisibility={[Function]}
-/>,
+                  handleSidebarVisibility={[MockFunction]}
+                />,
               ],
               "position": "right",
               "value": undefined,
@@ -503,8 +499,8 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <ChapterMenuItems
-                    handleSidebarVisibility={[Function]}
-/>,
+                    handleSidebarVisibility={[MockFunction]}
+                  />,
                   "getWidth": [Function],
                   "minWidth": 768,
                 },
@@ -514,7 +510,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "handleSidebarVisibility": [Function],
+                    "handleSidebarVisibility": [MockFunction],
                   },
                   "ref": null,
                   "rendered": null,
@@ -527,7 +523,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "handleSidebarVisibility": [Function],
+                  "handleSidebarVisibility": [MockFunction],
                 },
                 "ref": null,
                 "rendered": null,

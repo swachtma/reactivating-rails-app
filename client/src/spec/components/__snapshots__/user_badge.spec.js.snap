@@ -5,10 +5,34 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProfileIcon
     avatar="someurl.png"
-    dispatchSignalSignout={[Function]}
-    handleSidebarVisibility={[Function]}
+    dispatchSignalSignout={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    handleSidebarVisibility={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     username="TestDude"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -29,23 +53,35 @@ ShallowWrapper {
         compact={true}
         deburr={false}
         icon={
-                <Image
-                        as="img"
-                        avatar={true}
-                        src="someurl.png"
-                        style={
-                                Object {
-                                        "marginLeft": "1.757px",
-                                        "maxHeight": "32x",
-                                        "maxWidth": "32px",
-                                      }
-                        }
-                        ui={true}
-                />
+          <Image
+            as="img"
+            avatar={true}
+            src="someurl.png"
+            style={
+              Object {
+                "marginLeft": "1.757px",
+                "maxHeight": "32x",
+                "maxWidth": "32px",
+              }
+            }
+            ui={true}
+          />
         }
         minCharacters={1}
         noResultsMessage="No results found."
-        onFocus={[Function]}
+        onFocus={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          }
+        }
         openOnFocus={true}
         pointing="top right"
         renderLabel={[Function]}
@@ -53,15 +89,27 @@ ShallowWrapper {
         selectOnBlur={true}
         selectOnNavigation={true}
         wrapSelection={true}
->
+      >
         <DropdownMenu>
-                <DropdownItem
-                        onClick={[Function]}
-                >
-                        Sign Out
-                </DropdownItem>
+          <DropdownItem
+            onClick={
+              [MockFunction] {
+                "calls": Array [
+                  Array [],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              }
+            }
+          >
+            Sign Out
+          </DropdownItem>
         </DropdownMenu>
-</Dropdown>,
+      </Dropdown>,
       "fitted": true,
       "name": "TestDude",
     },
@@ -75,11 +123,23 @@ ShallowWrapper {
         "additionPosition": "top",
         "children": <DropdownMenu>
           <DropdownItem
-                    onClick={[Function]}
+            onClick={
+              [MockFunction] {
+                "calls": Array [
+                  Array [],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              }
+            }
           >
-                    Sign Out
+            Sign Out
           </DropdownItem>
-</DropdownMenu>,
+        </DropdownMenu>,
         "closeOnBlur": true,
         "compact": true,
         "deburr": false,
@@ -88,17 +148,27 @@ ShallowWrapper {
           avatar={true}
           src="someurl.png"
           style={
-                    Object {
-                              "marginLeft": "1.757px",
-                              "maxHeight": "32x",
-                              "maxWidth": "32px",
-                            }
+            Object {
+              "marginLeft": "1.757px",
+              "maxHeight": "32x",
+              "maxWidth": "32px",
+            }
           }
           ui={true}
-/>,
+        />,
         "minCharacters": 1,
         "noResultsMessage": "No results found.",
-        "onFocus": [Function],
+        "onFocus": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
         "openOnFocus": true,
         "pointing": "top right",
         "renderLabel": [Function],
@@ -114,10 +184,22 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <DropdownItem
-            onClick={[Function]}
->
+            onClick={
+              [MockFunction] {
+                "calls": Array [
+                  Array [],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              }
+            }
+          >
             Sign Out
-</DropdownItem>,
+          </DropdownItem>,
         },
         "ref": null,
         "rendered": Object {
@@ -126,7 +208,17 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Sign Out",
-            "onClick": [Function],
+            "onClick": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "ref": null,
           "rendered": "Sign Out",
@@ -151,23 +243,35 @@ ShallowWrapper {
           compact={true}
           deburr={false}
           icon={
-                    <Image
-                              as="img"
-                              avatar={true}
-                              src="someurl.png"
-                              style={
-                                        Object {
-                                                  "marginLeft": "1.757px",
-                                                  "maxHeight": "32x",
-                                                  "maxWidth": "32px",
-                                                }
-                              }
-                              ui={true}
-                    />
+            <Image
+              as="img"
+              avatar={true}
+              src="someurl.png"
+              style={
+                Object {
+                  "marginLeft": "1.757px",
+                  "maxHeight": "32x",
+                  "maxWidth": "32px",
+                }
+              }
+              ui={true}
+            />
           }
           minCharacters={1}
           noResultsMessage="No results found."
-          onFocus={[Function]}
+          onFocus={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
           openOnFocus={true}
           pointing="top right"
           renderLabel={[Function]}
@@ -175,15 +279,27 @@ ShallowWrapper {
           selectOnBlur={true}
           selectOnNavigation={true}
           wrapSelection={true}
->
+        >
           <DropdownMenu>
-                    <DropdownItem
-                              onClick={[Function]}
-                    >
-                              Sign Out
-                    </DropdownItem>
+            <DropdownItem
+              onClick={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+            >
+              Sign Out
+            </DropdownItem>
           </DropdownMenu>
-</Dropdown>,
+        </Dropdown>,
         "fitted": true,
         "name": "TestDude",
       },
@@ -197,11 +313,23 @@ ShallowWrapper {
           "additionPosition": "top",
           "children": <DropdownMenu>
             <DropdownItem
-                        onClick={[Function]}
+              onClick={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
             >
-                        Sign Out
+              Sign Out
             </DropdownItem>
-</DropdownMenu>,
+          </DropdownMenu>,
           "closeOnBlur": true,
           "compact": true,
           "deburr": false,
@@ -210,17 +338,27 @@ ShallowWrapper {
             avatar={true}
             src="someurl.png"
             style={
-                        Object {
-                                    "marginLeft": "1.757px",
-                                    "maxHeight": "32x",
-                                    "maxWidth": "32px",
-                                  }
+              Object {
+                "marginLeft": "1.757px",
+                "maxHeight": "32x",
+                "maxWidth": "32px",
+              }
             }
             ui={true}
-/>,
+          />,
           "minCharacters": 1,
           "noResultsMessage": "No results found.",
-          "onFocus": [Function],
+          "onFocus": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
           "openOnFocus": true,
           "pointing": "top right",
           "renderLabel": [Function],
@@ -236,10 +374,22 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <DropdownItem
-              onClick={[Function]}
->
+              onClick={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+            >
               Sign Out
-</DropdownItem>,
+            </DropdownItem>,
           },
           "ref": null,
           "rendered": Object {
@@ -248,7 +398,17 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Sign Out",
-              "onClick": [Function],
+              "onClick": [MockFunction] {
+                "calls": Array [
+                  Array [],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "ref": null,
             "rendered": "Sign Out",

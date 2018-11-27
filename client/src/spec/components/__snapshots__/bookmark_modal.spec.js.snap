@@ -5,12 +5,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <BookmarkModal
     active_chapter_id={1}
-    dispatchRoutechapter={[Function]}
-    dispatchSetBookmarkOffered={[Function]}
+    dispatchRoutechapter={[MockFunction]}
+    dispatchSetBookmarkOffered={[MockFunction]}
     displayState={true}
     furthest_read_id={11}
     last_read_id={5}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -30,72 +30,72 @@ ShallowWrapper {
         <Header
           content="Pick up where you left off"
           icon="archive"
-/>,
+        />,
         <ModalContent>
           <p>
-                    We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+            We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
           </p>
-</ModalContent>,
+        </ModalContent>,
         <ModalActions
           style={
-                    Object {
-                              "textAlign": "center",
-                            }
+            Object {
+              "textAlign": "center",
+            }
           }
->
+        >
           <Button
-                    as="button"
-                    basic={true}
-                    color="red"
-                    inverted={true}
-                    onClick={[Function]}
-                    role="button"
+            as="button"
+            basic={true}
+            color="red"
+            inverted={true}
+            onClick={[Function]}
+            role="button"
           >
-                    <Icon
-                              as="i"
-                              name="remove"
-                    />
-                     No, stay here
+            <Icon
+              as="i"
+              name="remove"
+            />
+             No, stay here
           </Button>
           <Button
-                    as="button"
-                    color="yellow"
-                    inverted={true}
-                    onClick={[Function]}
-                    role="button"
-                    value={5}
+            as="button"
+            color="yellow"
+            inverted={true}
+            onClick={[Function]}
+            role="button"
+            value={5}
           >
-                    <Icon
-                              as="i"
-                              name="checkmark"
-                    />
-                     Last read (Ch: 
-                    5
-                    )
+            <Icon
+              as="i"
+              name="checkmark"
+            />
+             Last read (Ch: 
+            5
+            )
           </Button>
           <Button
-                    as="button"
-                    color="green"
-                    inverted={true}
-                    onClick={[Function]}
-                    role="button"
-                    value={11}
+            as="button"
+            color="green"
+            inverted={true}
+            onClick={[Function]}
+            role="button"
+            value={11}
           >
-                    <Icon
-                              as="i"
-                              name="checkmark"
-                    />
-                     Furthest read (Ch: 
-                    11
-                    )
+            <Icon
+              as="i"
+              name="checkmark"
+            />
+             Furthest read (Ch: 
+            11
+            )
           </Button>
-</ModalActions>,
+        </ModalActions>,
       ],
       "closeOnDimmerClick": true,
       "closeOnDocumentClick": false,
       "dimmer": true,
       "eventPool": "Modal",
-      "onClose": [Function],
+      "onClose": [MockFunction],
       "open": true,
       "size": "small",
     },
@@ -120,7 +120,7 @@ ShallowWrapper {
         "props": Object {
           "children": <p>
             We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
-</p>,
+          </p>,
         },
         "ref": null,
         "rendered": Object {
@@ -149,13 +149,13 @@ ShallowWrapper {
               inverted={true}
               onClick={[Function]}
               role="button"
->
+            >
               <Icon
-                            as="i"
-                            name="remove"
+                as="i"
+                name="remove"
               />
                No, stay here
-</Button>,
+            </Button>,
             <Button
               as="button"
               color="yellow"
@@ -163,15 +163,15 @@ ShallowWrapper {
               onClick={[Function]}
               role="button"
               value={5}
->
+            >
               <Icon
-                            as="i"
-                            name="checkmark"
+                as="i"
+                name="checkmark"
               />
                Last read (Ch: 
               5
               )
-</Button>,
+            </Button>,
             <Button
               as="button"
               color="green"
@@ -179,15 +179,15 @@ ShallowWrapper {
               onClick={[Function]}
               role="button"
               value={11}
->
+            >
               <Icon
-                            as="i"
-                            name="checkmark"
+                as="i"
+                name="checkmark"
               />
                Furthest read (Ch: 
               11
               )
-</Button>,
+            </Button>,
           ],
           "style": Object {
             "textAlign": "center",
@@ -206,7 +206,7 @@ ShallowWrapper {
                 <Icon
                   as="i"
                   name="remove"
-/>,
+                />,
                 " No, stay here",
               ],
               "color": "red",
@@ -242,7 +242,7 @@ ShallowWrapper {
                 <Icon
                   as="i"
                   name="checkmark"
-/>,
+                />,
                 " Last read (Ch: ",
                 5,
                 ")",
@@ -283,7 +283,7 @@ ShallowWrapper {
                 <Icon
                   as="i"
                   name="checkmark"
-/>,
+                />,
                 " Furthest read (Ch: ",
                 11,
                 ")",
@@ -332,72 +332,72 @@ ShallowWrapper {
           <Header
             content="Pick up where you left off"
             icon="archive"
-/>,
+          />,
           <ModalContent>
             <p>
-                        We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
+              We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
             </p>
-</ModalContent>,
+          </ModalContent>,
           <ModalActions
             style={
-                        Object {
-                                    "textAlign": "center",
-                                  }
+              Object {
+                "textAlign": "center",
+              }
             }
->
+          >
             <Button
-                        as="button"
-                        basic={true}
-                        color="red"
-                        inverted={true}
-                        onClick={[Function]}
-                        role="button"
+              as="button"
+              basic={true}
+              color="red"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
             >
-                        <Icon
-                                    as="i"
-                                    name="remove"
-                        />
-                         No, stay here
+              <Icon
+                as="i"
+                name="remove"
+              />
+               No, stay here
             </Button>
             <Button
-                        as="button"
-                        color="yellow"
-                        inverted={true}
-                        onClick={[Function]}
-                        role="button"
-                        value={5}
+              as="button"
+              color="yellow"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
+              value={5}
             >
-                        <Icon
-                                    as="i"
-                                    name="checkmark"
-                        />
-                         Last read (Ch: 
-                        5
-                        )
+              <Icon
+                as="i"
+                name="checkmark"
+              />
+               Last read (Ch: 
+              5
+              )
             </Button>
             <Button
-                        as="button"
-                        color="green"
-                        inverted={true}
-                        onClick={[Function]}
-                        role="button"
-                        value={11}
+              as="button"
+              color="green"
+              inverted={true}
+              onClick={[Function]}
+              role="button"
+              value={11}
             >
-                        <Icon
-                                    as="i"
-                                    name="checkmark"
-                        />
-                         Furthest read (Ch: 
-                        11
-                        )
+              <Icon
+                as="i"
+                name="checkmark"
+              />
+               Furthest read (Ch: 
+              11
+              )
             </Button>
-</ModalActions>,
+          </ModalActions>,
         ],
         "closeOnDimmerClick": true,
         "closeOnDocumentClick": false,
         "dimmer": true,
         "eventPool": "Modal",
-        "onClose": [Function],
+        "onClose": [MockFunction],
         "open": true,
         "size": "small",
       },
@@ -422,7 +422,7 @@ ShallowWrapper {
           "props": Object {
             "children": <p>
               We've saved some bookmarks on your behalf. Would you like to resume reading at one of these locations?
-</p>,
+            </p>,
           },
           "ref": null,
           "rendered": Object {
@@ -451,13 +451,13 @@ ShallowWrapper {
                 inverted={true}
                 onClick={[Function]}
                 role="button"
->
+              >
                 <Icon
-                                as="i"
-                                name="remove"
+                  as="i"
+                  name="remove"
                 />
                  No, stay here
-</Button>,
+              </Button>,
               <Button
                 as="button"
                 color="yellow"
@@ -465,15 +465,15 @@ ShallowWrapper {
                 onClick={[Function]}
                 role="button"
                 value={5}
->
+              >
                 <Icon
-                                as="i"
-                                name="checkmark"
+                  as="i"
+                  name="checkmark"
                 />
                  Last read (Ch: 
                 5
                 )
-</Button>,
+              </Button>,
               <Button
                 as="button"
                 color="green"
@@ -481,15 +481,15 @@ ShallowWrapper {
                 onClick={[Function]}
                 role="button"
                 value={11}
->
+              >
                 <Icon
-                                as="i"
-                                name="checkmark"
+                  as="i"
+                  name="checkmark"
                 />
                  Furthest read (Ch: 
                 11
                 )
-</Button>,
+              </Button>,
             ],
             "style": Object {
               "textAlign": "center",
@@ -508,7 +508,7 @@ ShallowWrapper {
                   <Icon
                     as="i"
                     name="remove"
-/>,
+                  />,
                   " No, stay here",
                 ],
                 "color": "red",
@@ -544,7 +544,7 @@ ShallowWrapper {
                   <Icon
                     as="i"
                     name="checkmark"
-/>,
+                  />,
                   " Last read (Ch: ",
                   5,
                   ")",
@@ -585,7 +585,7 @@ ShallowWrapper {
                   <Icon
                     as="i"
                     name="checkmark"
-/>,
+                  />,
                   " Furthest read (Ch: ",
                   11,
                   ")",

@@ -4,10 +4,34 @@ exports[`<SideBarSignout /> renders according to snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SideBarSignout
-    dispatchSignalSignout={[Function]}
-    handleCloseClick={[Function]}
+    dispatchSignalSignout={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    handleCloseClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     username="TestDude"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,17 +47,17 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         style={
-                Object {
-                        "color": "#cc0000",
-                      }
+          Object {
+            "color": "#cc0000",
+          }
         }
->
+      >
         <Icon
-                as="i"
-                name="cancel"
+          as="i"
+          name="cancel"
         />
         Sign Out
-</div>,
+      </div>,
       "link": true,
       "name": "Sign Out",
       "onClick": [Function],
@@ -48,7 +72,7 @@ ShallowWrapper {
           <Icon
             as="i"
             name="cancel"
-/>,
+          />,
           "Sign Out",
         ],
         "style": Object {
@@ -83,17 +107,17 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           style={
-                    Object {
-                              "color": "#cc0000",
-                            }
+            Object {
+              "color": "#cc0000",
+            }
           }
->
+        >
           <Icon
-                    as="i"
-                    name="cancel"
+            as="i"
+            name="cancel"
           />
           Sign Out
-</div>,
+        </div>,
         "link": true,
         "name": "Sign Out",
         "onClick": [Function],
@@ -108,7 +132,7 @@ ShallowWrapper {
             <Icon
               as="i"
               name="cancel"
-/>,
+            />,
             "Sign Out",
           ],
           "style": Object {

@@ -5,23 +5,23 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NodesList
     nodes={
-        Array [
-            Object {
-              "chapter_id": 15,
-              "content": "\`\`\` javascript(path)
-        import React, { Component } from 'react';",
-              "id": 1892,
-              "node_type": "code_block",
-            },
-            Object {
-              "chapter_id": 15,
-              "content": "Here is some text",
-              "id": 1893,
-              "node_type": "paragraph",
-            },
-          ]
+      Array [
+        Object {
+          "chapter_id": 15,
+          "content": "\`\`\` javascript(path)
+import React, { Component } from 'react';",
+          "id": 1892,
+          "node_type": "code_block",
+        },
+        Object {
+          "chapter_id": 15,
+          "content": "Here is some text",
+          "id": 1893,
+          "node_type": "paragraph",
+        },
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -38,23 +38,23 @@ ShallowWrapper {
       "children": Array [
         <CodeExample
           node={
-                    Object {
-                              "chapter_id": 15,
-                              "content": "\`\`\` javascript(path)
-                    import React, { Component } from 'react';",
-                              "id": 1892,
-                              "node_type": "code_block",
-                            }
+            Object {
+              "chapter_id": 15,
+              "content": "\`\`\` javascript(path)
+import React, { Component } from 'react';",
+              "id": 1892,
+              "node_type": "code_block",
+            }
           }
-/>,
+        />,
         <ReactDOMFragment
           dangerouslySetInnerHTML={
-                    Object {
-                              "__html": "<p>Here is some text</p>
-                    ",
-                            }
+            Object {
+              "__html": "<p>Here is some text</p>
+",
+            }
           }
-/>,
+        />,
       ],
       "id": "nodes-list",
     },
@@ -103,23 +103,23 @@ import React, { Component } from 'react';",
         "children": Array [
           <CodeExample
             node={
-                        Object {
-                                    "chapter_id": 15,
-                                    "content": "\`\`\` javascript(path)
-                        import React, { Component } from 'react';",
-                                    "id": 1892,
-                                    "node_type": "code_block",
-                                  }
+              Object {
+                "chapter_id": 15,
+                "content": "\`\`\` javascript(path)
+import React, { Component } from 'react';",
+                "id": 1892,
+                "node_type": "code_block",
+              }
             }
-/>,
+          />,
           <ReactDOMFragment
             dangerouslySetInnerHTML={
-                        Object {
-                                    "__html": "<p>Here is some text</p>
-                        ",
-                                  }
+              Object {
+                "__html": "<p>Here is some text</p>
+",
+              }
             }
-/>,
+          />,
         ],
         "id": "nodes-list",
       },

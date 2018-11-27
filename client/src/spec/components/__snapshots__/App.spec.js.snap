@@ -22,10 +22,10 @@ ShallowWrapper {
         <Container
           id="main-section"
           text={true}
->
+        >
           <Connect(AlertList) />
           <Connect(RouterSwitch) />
-</Container>,
+        </Container>,
       ],
       "id": "app",
     },
@@ -89,10 +89,10 @@ ShallowWrapper {
           <Container
             id="main-section"
             text={true}
->
+          >
             <Connect(AlertList) />
             <Connect(RouterSwitch) />
-</Container>,
+          </Container>,
         ],
         "id": "app",
       },

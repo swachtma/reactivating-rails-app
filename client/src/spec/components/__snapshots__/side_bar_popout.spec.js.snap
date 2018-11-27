@@ -5,25 +5,25 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SideBarPopout
     active_chapter={
-        Object {
-            "id": 2,
-            "title": "Test Chapter 1",
-          }
+      Object {
+        "id": 2,
+        "title": "Test Chapter 1",
+      }
     }
     chapters={
-        Array [
-            Object {
-              "id": 1,
-              "title": "Test Chapter 1",
-            },
-            Object {
-              "id": 2,
-              "title": "Test Chapter 2",
-            },
-          ]
+      Array [
+        Object {
+          "id": 1,
+          "title": "Test Chapter 1",
+        },
+        Object {
+          "id": 2,
+          "title": "Test Chapter 2",
+        },
+      ]
     }
-    dispatchRouteChapter={[Function]}
-/>,
+    dispatchRouteChapter={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -39,68 +39,68 @@ ShallowWrapper {
     "props": Object {
       "children": <SidebarPushable
         style={null}
->
+      >
         <Sidebar
-                animation="overlay"
-                as={[Function]}
-                direction="left"
-                duration={500}
-                inverted={true}
-                style={
-                        Object {
-                                "maxHeight": "100vh",
-                                "maxWidth": "320px",
-                                "minHeight": "100vh",
-                                "minWidth": "320px",
-                                "padding": "45px 0 0 5px",
-                                "zIndex": 100,
-                              }
-                }
-                vertical={true}
-                visible={false}
-                width="wide"
+          animation="overlay"
+          as={[Function]}
+          direction="left"
+          duration={500}
+          inverted={true}
+          style={
+            Object {
+              "maxHeight": "100vh",
+              "maxWidth": "320px",
+              "minHeight": "100vh",
+              "minWidth": "320px",
+              "padding": "45px 0 0 5px",
+              "zIndex": 100,
+            }
+          }
+          vertical={true}
+          visible={false}
+          width="wide"
         >
-                <MenuItem
-                        disabled={false}
-                        link={true}
-                        name="chapter1"
-                        onClick={[Function]}
-                        value={1}
-                >
-                        Test Chapter 1
-                </MenuItem>
-                <MenuItem
-                        disabled={true}
-                        link={false}
-                        name="chapter2"
-                        onClick={null}
-                        value={2}
-                >
-                        Test Chapter 2
-                </MenuItem>
-                <Connect(SideBarSignout)
-                        handleCloseClick={[Function]}
-                />
-                <MenuItem
-                        link={true}
-                        name="Close Menu"
-                        onClick={[Function]}
-                >
-                        <div>
-                                <Icon
-                                        as="i"
-                                        name="cancel"
-                                />
-                                Close Menu
-                        </div>
-                </MenuItem>
+          <MenuItem
+            disabled={false}
+            link={true}
+            name="chapter1"
+            onClick={[Function]}
+            value={1}
+          >
+            Test Chapter 1
+          </MenuItem>
+          <MenuItem
+            disabled={true}
+            link={false}
+            name="chapter2"
+            onClick={null}
+            value={2}
+          >
+            Test Chapter 2
+          </MenuItem>
+          <Connect(SideBarSignout)
+            handleCloseClick={[Function]}
+          />
+          <MenuItem
+            link={true}
+            name="Close Menu"
+            onClick={[Function]}
+          >
+            <div>
+              <Icon
+                as="i"
+                name="cancel"
+              />
+              Close Menu
+            </div>
+          </MenuItem>
         </Sidebar>
         <SidebarPusher
-                dimmed={true}
-                onClick={[Function]}
-                style={null}
+          dimmed={true}
+          onClick={[Function]}
+          style={null}
         />
-</SidebarPushable>,
+      </SidebarPushable>,
       "id": "sideBarPopout",
       "onBlur": undefined,
       "style": Object {
@@ -123,59 +123,59 @@ ShallowWrapper {
             duration={500}
             inverted={true}
             style={
-                        Object {
-                                    "maxHeight": "100vh",
-                                    "maxWidth": "320px",
-                                    "minHeight": "100vh",
-                                    "minWidth": "320px",
-                                    "padding": "45px 0 0 5px",
-                                    "zIndex": 100,
-                                  }
+              Object {
+                "maxHeight": "100vh",
+                "maxWidth": "320px",
+                "minHeight": "100vh",
+                "minWidth": "320px",
+                "padding": "45px 0 0 5px",
+                "zIndex": 100,
+              }
             }
             vertical={true}
             visible={false}
             width="wide"
->
+          >
             <MenuItem
-                        disabled={false}
-                        link={true}
-                        name="chapter1"
-                        onClick={[Function]}
-                        value={1}
+              disabled={false}
+              link={true}
+              name="chapter1"
+              onClick={[Function]}
+              value={1}
             >
-                        Test Chapter 1
+              Test Chapter 1
             </MenuItem>
             <MenuItem
-                        disabled={true}
-                        link={false}
-                        name="chapter2"
-                        onClick={null}
-                        value={2}
+              disabled={true}
+              link={false}
+              name="chapter2"
+              onClick={null}
+              value={2}
             >
-                        Test Chapter 2
+              Test Chapter 2
             </MenuItem>
             <Connect(SideBarSignout)
-                        handleCloseClick={[Function]}
+              handleCloseClick={[Function]}
             />
             <MenuItem
-                        link={true}
-                        name="Close Menu"
-                        onClick={[Function]}
+              link={true}
+              name="Close Menu"
+              onClick={[Function]}
             >
-                        <div>
-                                    <Icon
-                                                as="i"
-                                                name="cancel"
-                                    />
-                                    Close Menu
-                        </div>
+              <div>
+                <Icon
+                  as="i"
+                  name="cancel"
+                />
+                Close Menu
+              </div>
             </MenuItem>
-</Sidebar>,
+          </Sidebar>,
           <SidebarPusher
             dimmed={true}
             onClick={[Function]}
             style={null}
-/>,
+          />,
         ],
         "style": null,
       },
@@ -196,35 +196,35 @@ ShallowWrapper {
                   name="chapter1"
                   onClick={[Function]}
                   value={1}
->
+                >
                   Test Chapter 1
-</MenuItem>,
+                </MenuItem>,
                 <MenuItem
                   disabled={true}
                   link={false}
                   name="chapter2"
                   onClick={null}
                   value={2}
->
+                >
                   Test Chapter 2
-</MenuItem>,
+                </MenuItem>,
               ],
               <Connect(SideBarSignout)
                 handleCloseClick={[Function]}
-/>,
+              />,
               <MenuItem
                 link={true}
                 name="Close Menu"
                 onClick={[Function]}
->
+              >
                 <div>
-                                <Icon
-                                                as="i"
-                                                name="cancel"
-                                />
-                                Close Menu
+                  <Icon
+                    as="i"
+                    name="cancel"
+                  />
+                  Close Menu
                 </div>
-</MenuItem>,
+              </MenuItem>,
             ],
             "direction": "left",
             "duration": 500,
@@ -293,11 +293,11 @@ ShallowWrapper {
               "props": Object {
                 "children": <div>
                   <Icon
-                                    as="i"
-                                    name="cancel"
+                    as="i"
+                    name="cancel"
                   />
                   Close Menu
-</div>,
+                </div>,
                 "link": true,
                 "name": "Close Menu",
                 "onClick": [Function],
@@ -312,7 +312,7 @@ ShallowWrapper {
                     <Icon
                       as="i"
                       name="cancel"
-/>,
+                    />,
                     "Close Menu",
                   ],
                 },
@@ -365,68 +365,68 @@ ShallowWrapper {
       "props": Object {
         "children": <SidebarPushable
           style={null}
->
+        >
           <Sidebar
-                    animation="overlay"
-                    as={[Function]}
-                    direction="left"
-                    duration={500}
-                    inverted={true}
-                    style={
-                              Object {
-                                        "maxHeight": "100vh",
-                                        "maxWidth": "320px",
-                                        "minHeight": "100vh",
-                                        "minWidth": "320px",
-                                        "padding": "45px 0 0 5px",
-                                        "zIndex": 100,
-                                      }
-                    }
-                    vertical={true}
-                    visible={false}
-                    width="wide"
+            animation="overlay"
+            as={[Function]}
+            direction="left"
+            duration={500}
+            inverted={true}
+            style={
+              Object {
+                "maxHeight": "100vh",
+                "maxWidth": "320px",
+                "minHeight": "100vh",
+                "minWidth": "320px",
+                "padding": "45px 0 0 5px",
+                "zIndex": 100,
+              }
+            }
+            vertical={true}
+            visible={false}
+            width="wide"
           >
-                    <MenuItem
-                              disabled={false}
-                              link={true}
-                              name="chapter1"
-                              onClick={[Function]}
-                              value={1}
-                    >
-                              Test Chapter 1
-                    </MenuItem>
-                    <MenuItem
-                              disabled={true}
-                              link={false}
-                              name="chapter2"
-                              onClick={null}
-                              value={2}
-                    >
-                              Test Chapter 2
-                    </MenuItem>
-                    <Connect(SideBarSignout)
-                              handleCloseClick={[Function]}
-                    />
-                    <MenuItem
-                              link={true}
-                              name="Close Menu"
-                              onClick={[Function]}
-                    >
-                              <div>
-                                        <Icon
-                                                  as="i"
-                                                  name="cancel"
-                                        />
-                                        Close Menu
-                              </div>
-                    </MenuItem>
+            <MenuItem
+              disabled={false}
+              link={true}
+              name="chapter1"
+              onClick={[Function]}
+              value={1}
+            >
+              Test Chapter 1
+            </MenuItem>
+            <MenuItem
+              disabled={true}
+              link={false}
+              name="chapter2"
+              onClick={null}
+              value={2}
+            >
+              Test Chapter 2
+            </MenuItem>
+            <Connect(SideBarSignout)
+              handleCloseClick={[Function]}
+            />
+            <MenuItem
+              link={true}
+              name="Close Menu"
+              onClick={[Function]}
+            >
+              <div>
+                <Icon
+                  as="i"
+                  name="cancel"
+                />
+                Close Menu
+              </div>
+            </MenuItem>
           </Sidebar>
           <SidebarPusher
-                    dimmed={true}
-                    onClick={[Function]}
-                    style={null}
+            dimmed={true}
+            onClick={[Function]}
+            style={null}
           />
-</SidebarPushable>,
+        </SidebarPushable>,
         "id": "sideBarPopout",
         "onBlur": undefined,
         "style": Object {
@@ -449,59 +449,59 @@ ShallowWrapper {
               duration={500}
               inverted={true}
               style={
-                            Object {
-                                          "maxHeight": "100vh",
-                                          "maxWidth": "320px",
-                                          "minHeight": "100vh",
-                                          "minWidth": "320px",
-                                          "padding": "45px 0 0 5px",
-                                          "zIndex": 100,
-                                        }
+                Object {
+                  "maxHeight": "100vh",
+                  "maxWidth": "320px",
+                  "minHeight": "100vh",
+                  "minWidth": "320px",
+                  "padding": "45px 0 0 5px",
+                  "zIndex": 100,
+                }
               }
               vertical={true}
               visible={false}
               width="wide"
->
+            >
               <MenuItem
-                            disabled={false}
-                            link={true}
-                            name="chapter1"
-                            onClick={[Function]}
-                            value={1}
+                disabled={false}
+                link={true}
+                name="chapter1"
+                onClick={[Function]}
+                value={1}
               >
-                            Test Chapter 1
+                Test Chapter 1
               </MenuItem>
               <MenuItem
-                            disabled={true}
-                            link={false}
-                            name="chapter2"
-                            onClick={null}
-                            value={2}
+                disabled={true}
+                link={false}
+                name="chapter2"
+                onClick={null}
+                value={2}
               >
-                            Test Chapter 2
+                Test Chapter 2
               </MenuItem>
               <Connect(SideBarSignout)
-                            handleCloseClick={[Function]}
+                handleCloseClick={[Function]}
               />
               <MenuItem
-                            link={true}
-                            name="Close Menu"
-                            onClick={[Function]}
+                link={true}
+                name="Close Menu"
+                onClick={[Function]}
               >
-                            <div>
-                                          <Icon
-                                                        as="i"
-                                                        name="cancel"
-                                          />
-                                          Close Menu
-                            </div>
+                <div>
+                  <Icon
+                    as="i"
+                    name="cancel"
+                  />
+                  Close Menu
+                </div>
               </MenuItem>
-</Sidebar>,
+            </Sidebar>,
             <SidebarPusher
               dimmed={true}
               onClick={[Function]}
               style={null}
-/>,
+            />,
           ],
           "style": null,
         },
@@ -522,35 +522,35 @@ ShallowWrapper {
                     name="chapter1"
                     onClick={[Function]}
                     value={1}
->
+                  >
                     Test Chapter 1
-</MenuItem>,
+                  </MenuItem>,
                   <MenuItem
                     disabled={true}
                     link={false}
                     name="chapter2"
                     onClick={null}
                     value={2}
->
+                  >
                     Test Chapter 2
-</MenuItem>,
+                  </MenuItem>,
                 ],
                 <Connect(SideBarSignout)
                   handleCloseClick={[Function]}
-/>,
+                />,
                 <MenuItem
                   link={true}
                   name="Close Menu"
                   onClick={[Function]}
->
+                >
                   <div>
-                                    <Icon
-                                                      as="i"
-                                                      name="cancel"
-                                    />
-                                    Close Menu
+                    <Icon
+                      as="i"
+                      name="cancel"
+                    />
+                    Close Menu
                   </div>
-</MenuItem>,
+                </MenuItem>,
               ],
               "direction": "left",
               "duration": 500,
@@ -619,11 +619,11 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div>
                     <Icon
-                                        as="i"
-                                        name="cancel"
+                      as="i"
+                      name="cancel"
                     />
                     Close Menu
-</div>,
+                  </div>,
                   "link": true,
                   "name": "Close Menu",
                   "onClick": [Function],
@@ -638,7 +638,7 @@ ShallowWrapper {
                       <Icon
                         as="i"
                         name="cancel"
-/>,
+                      />,
                       "Close Menu",
                     ],
                   },

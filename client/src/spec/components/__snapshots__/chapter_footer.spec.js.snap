@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": <h2>
         The End - Thank you for Reading!
-</h2>,
+      </h2>,
       "id": "chapter-footer-link",
       "style": Object {
         "margin": "30px 0",
@@ -48,7 +48,7 @@ ShallowWrapper {
       "props": Object {
         "children": <h2>
           The End - Thank you for Reading!
-</h2>,
+        </h2>,
         "id": "chapter-footer-link",
         "style": Object {
           "margin": "30px 0",
@@ -95,12 +95,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ChapterFooter
     next_chapter={
-        Object {
-            "id": 5,
-            "title": "Something Witty",
-          }
+      Object {
+        "id": 5,
+        "title": "Something Witty",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -116,19 +116,19 @@ ShallowWrapper {
     "props": Object {
       "children": <h2>
         <Connect(Link)
-                to={
-                        Object {
-                                "payload": Object {
-                                  "chapter_id": 5,
-                                },
-                                "type": "CHAPTER_ROUTE",
-                              }
-                }
+          to={
+            Object {
+              "payload": Object {
+                "chapter_id": 5,
+              },
+              "type": "CHAPTER_ROUTE",
+            }
+          }
         >
-                Next - 
-                Something Witty
+          Next - 
+          Something Witty
         </Connect(Link)>
-</h2>,
+      </h2>,
       "id": "chapter-footer-link",
       "style": Object {
         "margin": "30px 0",
@@ -143,17 +143,17 @@ ShallowWrapper {
       "props": Object {
         "children": <Connect(Link)
           to={
-                    Object {
-                              "payload": Object {
-                                "chapter_id": 5,
-                              },
-                              "type": "CHAPTER_ROUTE",
-                            }
+            Object {
+              "payload": Object {
+                "chapter_id": 5,
+              },
+              "type": "CHAPTER_ROUTE",
+            }
           }
->
+        >
           Next - 
           Something Witty
-</Connect(Link)>,
+        </Connect(Link)>,
       },
       "ref": null,
       "rendered": Object {
@@ -191,19 +191,19 @@ ShallowWrapper {
       "props": Object {
         "children": <h2>
           <Connect(Link)
-                    to={
-                              Object {
-                                        "payload": Object {
-                                          "chapter_id": 5,
-                                        },
-                                        "type": "CHAPTER_ROUTE",
-                                      }
-                    }
+            to={
+              Object {
+                "payload": Object {
+                  "chapter_id": 5,
+                },
+                "type": "CHAPTER_ROUTE",
+              }
+            }
           >
-                    Next - 
-                    Something Witty
+            Next - 
+            Something Witty
           </Connect(Link)>
-</h2>,
+        </h2>,
         "id": "chapter-footer-link",
         "style": Object {
           "margin": "30px 0",
@@ -218,17 +218,17 @@ ShallowWrapper {
         "props": Object {
           "children": <Connect(Link)
             to={
-                        Object {
-                                    "payload": Object {
-                                      "chapter_id": 5,
-                                    },
-                                    "type": "CHAPTER_ROUTE",
-                                  }
+              Object {
+                "payload": Object {
+                  "chapter_id": 5,
+                },
+                "type": "CHAPTER_ROUTE",
+              }
             }
->
+          >
             Next - 
             Something Witty
-</Connect(Link)>,
+          </Connect(Link)>,
         },
         "ref": null,
         "rendered": Object {

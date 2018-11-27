@@ -21,10 +21,10 @@ ShallowWrapper {
         <Connect(BookmarkModal) />,
         <Container
           text={true}
->
+        >
           <Connect(NodesList) />
           <Connect(ChapterFooter) />
-</Container>,
+        </Container>,
       ],
       "id": "reader-pane",
       "style": Object {
@@ -90,10 +90,10 @@ ShallowWrapper {
           <Connect(BookmarkModal) />,
           <Container
             text={true}
->
+          >
             <Connect(NodesList) />
             <Connect(ChapterFooter) />
-</Container>,
+          </Container>,
         ],
         "id": "reader-pane",
         "style": Object {

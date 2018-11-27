@@ -19,27 +19,27 @@ ShallowWrapper {
     "props": Object {
       "children": <Container
         text={true}
->
+      >
         <h1>
-                Well Shucks...
+          Well Shucks...
         </h1>
         <p>
-                This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
+          This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
         </p>
         <p>
-                How about you 
-                <Connect(Link)
-                        to={
-                                Object {
-                                        "type": "HOME_ROUTE",
-                                      }
-                        }
-                >
-                        head to the homepage
-                </Connect(Link)>
-                 and try giving it another go?
+          How about you 
+          <Connect(Link)
+            to={
+              Object {
+                "type": "HOME_ROUTE",
+              }
+            }
+          >
+            head to the homepage
+          </Connect(Link)>
+           and try giving it another go?
         </p>
-</Container>,
+      </Container>,
       "id": "error-pane",
     },
     "ref": null,
@@ -51,23 +51,23 @@ ShallowWrapper {
         "children": Array [
           <h1>
             Well Shucks...
-</h1>,
+          </h1>,
           <p>
             This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
-</p>,
+          </p>,
           <p>
             How about you 
             <Connect(Link)
-                        to={
-                                    Object {
-                                                "type": "HOME_ROUTE",
-                                              }
-                        }
+              to={
+                Object {
+                  "type": "HOME_ROUTE",
+                }
+              }
             >
-                        head to the homepage
+              head to the homepage
             </Connect(Link)>
              and try giving it another go?
-</p>,
+          </p>,
         ],
         "text": true,
       },
@@ -104,13 +104,13 @@ ShallowWrapper {
               "How about you ",
               <Connect(Link)
                 to={
-                                Object {
-                                                "type": "HOME_ROUTE",
-                                              }
+                  Object {
+                    "type": "HOME_ROUTE",
+                  }
                 }
->
+              >
                 head to the homepage
-</Connect(Link)>,
+              </Connect(Link)>,
               " and try giving it another go?",
             ],
           },
@@ -148,27 +148,27 @@ ShallowWrapper {
       "props": Object {
         "children": <Container
           text={true}
->
+        >
           <h1>
-                    Well Shucks...
+            Well Shucks...
           </h1>
           <p>
-                    This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
+            This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
           </p>
           <p>
-                    How about you 
-                    <Connect(Link)
-                              to={
-                                        Object {
-                                                  "type": "HOME_ROUTE",
-                                                }
-                              }
-                    >
-                              head to the homepage
-                    </Connect(Link)>
-                     and try giving it another go?
+            How about you 
+            <Connect(Link)
+              to={
+                Object {
+                  "type": "HOME_ROUTE",
+                }
+              }
+            >
+              head to the homepage
+            </Connect(Link)>
+             and try giving it another go?
           </p>
-</Container>,
+        </Container>,
         "id": "error-pane",
       },
       "ref": null,
@@ -180,23 +180,23 @@ ShallowWrapper {
           "children": Array [
             <h1>
               Well Shucks...
-</h1>,
+            </h1>,
             <p>
               This page is where we, unfortunately, make up some cutesy reason to apologize for our site not working at the moment. In any case, we don't seem able to do the things at the moment.
-</p>,
+            </p>,
             <p>
               How about you 
               <Connect(Link)
-                            to={
-                                          Object {
-                                                        "type": "HOME_ROUTE",
-                                                      }
-                            }
+                to={
+                  Object {
+                    "type": "HOME_ROUTE",
+                  }
+                }
               >
-                            head to the homepage
+                head to the homepage
               </Connect(Link)>
                and try giving it another go?
-</p>,
+            </p>,
           ],
           "text": true,
         },
@@ -233,13 +233,13 @@ ShallowWrapper {
                 "How about you ",
                 <Connect(Link)
                   to={
-                                    Object {
-                                                      "type": "HOME_ROUTE",
-                                                    }
+                    Object {
+                      "type": "HOME_ROUTE",
+                    }
                   }
->
+                >
                   head to the homepage
-</Connect(Link)>,
+                </Connect(Link)>,
                 " and try giving it another go?",
               ],
             },
