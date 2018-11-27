@@ -54,3 +54,4 @@ client/jest_0/
 
 # Docker Secrets
 /.docker/.secrets/*
+/.docker-production
