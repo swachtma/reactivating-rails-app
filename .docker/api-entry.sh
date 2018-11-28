@@ -2,8 +2,8 @@
 set -e # Exit on fail
 echo "===== BEGINNING API SETUP ====="
 
-# Check for exisiting client folder, if none copy create-react-app from container to mounted client /dir
-# Ensures all users start with the same cached version of CRA/react-scripts
+# Check for an exisiting api/ folder, brought by a bind mount from user's local
+# If no local progect found; copy app-lock starter from container to mounted api/ directory
 if [ -z "$(ls -A /root/api)" ]; then
   echo "===== DIRECTORY /api NOT FOUND, COPYING PROJECT STARTER ====="
   cp -r /app_lock/rr_api/* /root/api # Clone project to api bind volume
@@ -17,7 +17,7 @@ cd /root/api
 echo "===== CHECKING STATUS OF BUNDLE ====="
 bundle check || bundle install --binstubs="$BUNDLE_BIN"
 
-#Check if there is already a copy of the book in the lib directory
+# Check if there is already a copy of the book in the lib directory
 if [ -z "$(ls -A /root/api/lib/reactivating-rails)" ]; then
   echo "===== BOOK MARKDOWN NOT FOUND, CLONING LATEST COPY ====="
   # Clone latest copy of book of lib directory
@@ -25,12 +25,13 @@ if [ -z "$(ls -A /root/api/lib/reactivating-rails)" ]; then
 fi
 
 # Setup databases if needed and run any new migrations
-rails db:create
-rails db:migrate
+bin/rails db:create
+bin/rails db:migrate
 
-# Change to api root so bash start containers in application root on CMD override
-cd /root/api
-rm -f tmp/pids/* || true # Remove existing server process ID files
+# Remove any existing server process ID files from tmp/pids/ these files can be orphaned 
+# when docker-compose down terminates the API container with Puma running.  Preeventing server 
+# start on the next docker-compose up
+rm -f tmp/pids/* || true 
 
-# Finally call command issued to the docker service
+# Call start command issued passed to Docker.
 exec "$@"

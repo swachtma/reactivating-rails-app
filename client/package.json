@@ -12,7 +12,6 @@
     "markdown-it": "^8.4.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-dom-fragment": "^0.6.0",
     "react-redux": "^5.0.7",
     "react-scripts": "2.1.1",
     "redux": "^4.0.0",

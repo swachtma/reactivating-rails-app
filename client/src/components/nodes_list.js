@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import Fragment from 'react-dom-fragment'
 import { array } from 'prop-types'
 import MarkdownIt from 'markdown-it'
 
@@ -13,7 +12,7 @@ export default class NodesList extends PureComponent {
   renderNodes = (nodes) => nodes.map((node) =>
     node.node_type === 'code_block'
       ? <CodeExample key={'node_' + node.id} node={node} />
-      : <Fragment key={'node_' + node.id} dangerouslySetInnerHTML={{ __html: md.render(node.content) }} />
+      : <div key={'node_' + node.id} dangerouslySetInnerHTML={{ __html: md.render(node.content) }} />
   );
 
   render () {
