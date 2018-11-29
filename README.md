@@ -1,1 +1,2 @@
-# reactivating-rails-app
+# Reactivating Rails
+
