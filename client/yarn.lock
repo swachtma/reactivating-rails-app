@@ -792,10 +792,6 @@
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
 
-"@ungap/essential-map@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@ungap/essential-map/-/essential-map-0.1.7.tgz#466b181c299f825b1d853901ee88f3ce302b7c71"
-
 "@webassemblyjs/ast@1.7.6":
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.6.tgz#3ef8c45b3e5e943a153a05281317474fef63e21e"
@@ -2676,12 +2672,6 @@ dom-serializer@0, dom-serializer@~0.1.0:
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
-
-domdiff@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-2.0.2.tgz#c63535384d8d1f5954d36049a9d6a770d8a50dcb"
-  dependencies:
-    "@ungap/essential-map" "^0.1.7"
 
 domelementtype@1:
   version "1.2.1"
@@ -7125,12 +7115,6 @@ react-dev-utils@^6.1.1:
     sockjs-client "1.1.5"
     strip-ansi "4.0.0"
     text-table "0.2.0"
-
-react-dom-fragment@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/react-dom-fragment/-/react-dom-fragment-0.6.0.tgz#d2b25678dff64f02c3459f7ed551a57c28d96b4b"
-  dependencies:
-    domdiff "^2.0.0"
 
 react-dom@^16.4.2:
   version "16.6.3"
