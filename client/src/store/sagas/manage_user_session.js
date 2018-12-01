@@ -15,7 +15,7 @@ export function * manageUserSession () {
       let action, token
       while (!token) {
         action = yield take([routes.AUTH_ROUTE, 'persist/REHYDRATE'])
-        token = action.payload.token || action.payload.user.token
+        action.payload && (token = action.payload.token || action.payload.user.token)
       }
 
       let sign_in = yield fork(handleSignIn, token)

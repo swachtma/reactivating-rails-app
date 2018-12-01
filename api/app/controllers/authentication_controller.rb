@@ -1,12 +1,13 @@
 class AuthenticationController < ApplicationController
   include TokenOps
+  GITHUB_CLIENT_ID = File.read("/run/secrets/github_client_id")
   GITHUB_CLIENT_SECRET = File.read("/run/secrets/github_client_secret")
 
   def github
     begin
       code = params[:code]
       bounce_path = ERB::Util.url_encode(params[:bounce_path])
-      github = Github.new client_id: ENV["GITHUB_CLIENT_ID"], client_secret: GITHUB_CLIENT_SECRET
+      github = Github.new client_id: GITHUB_CLIENT_ID, client_secret: GITHUB_CLIENT_SECRET
       token = github.get_token(code).token
       
       github_users = Github::Client::Users.new oauth_token: token

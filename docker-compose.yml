@@ -17,8 +17,11 @@ services:
     command: ["rails","server"]
     environment:
       - CLIENT_URL=http://localhost
-      - GITHUB_CLIENT_ID=a86bc65853ae65d3be52
     secrets:
+      - pg_user
+      - pg_password
+      - pg_database
+      - github_client_id
       - github_client_secret
       - jwt_secret
   client:
@@ -46,6 +49,14 @@ volumes:
   node_modules:
   pgdata:
 secrets:
+  pg_user:
+    file: ./.docker/.secrets/pg_user.txt
+  pg_password:
+    file: ./.docker/.secrets/pg_password.txt
+  pg_database:
+    file: ./.docker/.secrets/pg_database.txt
+  github_client_id:
+    file: ./.docker/.secrets/github_client_secret.txt
   github_client_secret:
     file: ./.docker/.secrets/github_client_secret.txt
   jwt_secret:

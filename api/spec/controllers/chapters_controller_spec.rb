@@ -1,4 +1,4 @@
-RSpec.describe Api::ChaptersController, type: :controller do
+RSpec.describe ChaptersController, type: :controller do
   describe "GET #idex" do
     it "returns nodes if available" do
       Chapter.create(title: "test run")

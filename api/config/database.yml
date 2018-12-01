@@ -19,8 +19,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: pgdb
-  username: postgres
-  password: secretword
+  username: <%= File.read("/run/secrets/pg_user") %>
+  password: <%= File.read("/run/secrets/pg_password") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: rr_api_production
-  username: rr_api
-  password: <%= ENV['RR_API_DATABASE_PASSWORD'] %>
+  database: <%= File.read("/run/secrets/pg_database") %>
+  username: <%= File.read("/run/secrets/pg_user") %>
+  password: <%= File.read("/run/secrets/pg_password") %>

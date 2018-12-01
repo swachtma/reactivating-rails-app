@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Api::AuthenticationController, type: :controller do
+RSpec.describe AuthenticationController, type: :controller do
   describe "GET #github" do
     let(:sample_response) { OpenStruct.new({id: 1, email: "", login: "", avatar_url: ""}) }
    

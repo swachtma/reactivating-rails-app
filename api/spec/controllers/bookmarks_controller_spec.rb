@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Api::BookmarksController, type: :controller do
+RSpec.describe BookmarksController, type: :controller do
   before(:each) do
     @user = User.create(github_id: 1, github_email: "someone", username: "someoneelse", avatar: "someimage")
     @user.bookmark = Bookmark.create(last_read: 1, furthest_read: 1)

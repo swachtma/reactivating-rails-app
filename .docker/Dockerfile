@@ -69,4 +69,9 @@
   # Copy client build for client-build container to prod container
   COPY --from=client-build /root/client/build /root/public
 
+  # Copy startup script to container root and set as entrypoint
+  COPY ./.docker/prod-entry.sh /prod-entry.sh
+  RUN chmod +x /prod-entry.sh
+  ENTRYPOINT [ "/prod-entry.sh" ]
+
   CMD ["bin/rails", "server"]

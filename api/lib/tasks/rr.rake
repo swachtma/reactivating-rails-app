@@ -5,12 +5,12 @@ require "#{Rails.root}/lib/chapter_file"
 namespace :rr do
   desc "Import content at lib/reactivating-rails/"
   task load_book: :environment do
-    puts "Loading book content..."
+    puts "Loading book content..." unless ENV["RAILS_ENV"] = "test"
     book_path = "#{Rails.root}/lib/reactivating-rails"
     entries = BookFileFinder.new(book_path).entries
     images = BookImageFinder.new(book_path)
     
-    puts "Copying image files to public/images..."
+    puts "Copying image files to public/images..." unless ENV["RAILS_ENV"] = "test"
     images.copy_files_to_public
 
     
@@ -32,6 +32,14 @@ namespace :rr do
 
   desc "Clear content of previously loaded iterations"
   task clear_book: :environment do
-    puts "Clearing book content..."
+    puts "Clearing book content..." unless ENV["RAILS_ENV"] = "test"
+
+    # Remove chapters and reset primary key
+    Chapter.delete_all
+    ActiveRecord::Base.connection.reset_pk_sequence!(:chapters)
+
+    # Remove nodes and reset primary key
+    Node.delete_all
+    ActiveRecord::Base.connection.reset_pk_sequence!(:nodes)
   end
 end

@@ -14,7 +14,7 @@ GithubIcon.propTypes = {
 
 export default function GithubIcon (props) {
   const { location } = props
-  const base_path = 'https://github.com/login/oauth/authorize?client_id=a86bc65853ae65d3be52&redirect_uri='
+  const base_path = 'https://github.com/login/oauth/authorize?client_id=81fc568e20ee9f3f7105&redirect_uri='
   const bounce_path = JSON.stringify({ type: location.type, payload: location.payload })
   const rd = encodeURIComponent(BASE_AUTH_PATH + '?bounce_path=' + bounce_path)
 
