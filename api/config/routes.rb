@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     get 'chapters/', to: "chapters#index"
     resources :bookmarks, only: [:index, :create]
   end
+
+  get '*path', to: 'static#index'
 end
