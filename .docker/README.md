@@ -29,14 +29,14 @@ Volumes can automatically be created and attached to the droplet/node by calling
 When recreating a new swarm you will need to execute the following command to create the needed Docker Secrets.  These are stored in your LastPass Secure Notes.
 
 ```
-echo -n "reactivating_rails_prod" | docker secret create pg_database -
-echo -n "reactivating_rails_admin" | docker secret create pg_user -
-echo -n "2Eyj1eQ0z6syq6v25UBIHlDWZIUKEVqLyTxN5lcIk" | docker secret create pg_password -
+echo -n "" | docker secret create pg_database -
+echo -n "" | docker secret create pg_user -
+echo -n "" | docker secret create pg_password -
 
-echo -n "81fc568e20ee9f3f7105" | docker secret create github_client_id -
-echo -n "8c29037525f5b6d500490f969f0251e944f83325" | docker secret create github_client_secret -
+echo -n "" | docker secret create github_client_id -
+echo -n "" | docker secret create github_client_secret -
 
-echo -n "HDua4O" | docker secret create jwt_secret -
+echo -n "" | docker secret create jwt_secret -
 ```
 
 ## Bringing the Swarm Online
