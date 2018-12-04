@@ -4,7 +4,7 @@ import { string, array } from 'prop-types'
 const styles = {
   alertStyle: {
     padding: '15px',
-    marginBottom: '20px',
+    marginBottom: '-15px',
     border: '1px solid transparent',
     borderRadius: '4px'
   },

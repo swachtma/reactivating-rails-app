@@ -2,7 +2,7 @@ import React from 'react'
 import { object, string, shape } from 'prop-types'
 import { Menu, Icon } from 'semantic-ui-react'
 
-import { BASE_AUTH_PATH } from '../constants/settings'
+import { BASE_AUTH_PATH, GITHUB_CLIENT_ID } from '../constants/settings'
 
 const styles = {
   githubIcon: { marginRight: 0 }
@@ -14,7 +14,7 @@ GithubIcon.propTypes = {
 
 export default function GithubIcon (props) {
   const { location } = props
-  const base_path = 'https://github.com/login/oauth/authorize?client_id=81fc568e20ee9f3f7105&redirect_uri='
+  const base_path = 'https://github.com/login/oauth/authorize?client_id=' + GITHUB_CLIENT_ID + '&redirect_uri='
   const bounce_path = JSON.stringify({ type: location.type, payload: location.payload })
   const rd = encodeURIComponent(BASE_AUTH_PATH + '?bounce_path=' + bounce_path)
 

@@ -37,6 +37,7 @@ export default function ChapterMenuItems (props) {
       text={active_chapter.title}
       onChange={dispatchRouteChapter}
       options={renderChapterOptions()}
+      scrolling={true}
     />
   )
 }

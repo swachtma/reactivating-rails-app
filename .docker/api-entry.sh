@@ -2,22 +2,16 @@
 set -e # Exit on fail
 echo "===== BEGINNING API SETUP ====="
 
-# Check for an exisiting api/ folder, brought by a bind mount from user's local
-# If no local progect found; copy app-lock starter from container to mounted api/ directory
-if [ -z "$(ls -A /root/api)" ]; then
-  echo "===== DIRECTORY /api NOT FOUND, COPYING PROJECT STARTER ====="
-  cp -r /app_lock/rr_api/* /root/api # Clone project to api bind volume
-  rm /root/api/README.md # Remove README to avoid multiples in project
+# Script check bundle and updates as needed when user in dev
+# controlled by ENV set in Dockerfile --target=api-dev
+if [ $BUNDLE_ON_START == 1 ]; then 
+  echo "===== STARTING IN DEV, CHECKING BUNDLE ====="
+  bundle check || bundle install
 fi
 
-# Change to rails project directory
-cd /root/api
-
-# Ensure all gems installed. Add binstubs to bin which has been added to PATH in Dockerfile.
-echo "===== CHECKING STATUS OF BUNDLE ====="
-bundle check || bundle install --binstubs="$BUNDLE_BIN"
-
-# Check if there is already a copy of the book in the lib directory
+# Clone latest copy of book if one is not populated.  
+# Always on production container start.
+# Only on first dev docker-compose up unless user deletes book directory
 if [ -z "$(ls -A /root/api/lib/reactivating-rails)" ]; then
   echo "===== BOOK MARKDOWN NOT FOUND, CLONING LATEST COPY ====="
   # Clone latest copy of book of lib directory
@@ -28,9 +22,11 @@ fi
 bin/rails db:create
 bin/rails db:migrate
 
-# Remove any existing server process ID files from tmp/pids/ these files can be orphaned 
-# when docker-compose down terminates the API container with Puma running.  Preeventing server 
-# start on the next docker-compose up
+# Clear book from database and reset indexes for Node and Chapter tables
+if [ "$(rake -T | grep rr:clear_book)" ]; then bin/rails rr:clear_book; fi;
+if [ "$(rake -T | grep rr:load_book)" ]; then bin/rails rr:load_book; fi
+
+# Remove any existing server process ID files from tmp/pids/
 rm -f tmp/pids/* || true 
 
 # Call start command issued passed to Docker.
