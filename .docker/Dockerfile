@@ -34,11 +34,14 @@
   COPY ./api/Gemfile /root/api/Gemfile
   COPY ./api/Gemfile.lock /root/api/Gemfile.lock
 
-  # Copy client application files
-  COPY ./api /root/api
-
   # Change to API directory
   WORKDIR /root/api 
+
+  # Install Gems
+  RUN bundle install
+
+  # Copy client application files
+  COPY ./api /root/api
 
   # Copy startup script to container root and set as entrypoint
   COPY ./.docker/api-entry.sh /api-entry.sh
@@ -58,7 +61,9 @@
 
   FROM api-base as prod
 
+  RUN rm -rf /root/api/lib/reactivating-rails
+
   # Copy client build for client-build container to prod container
-  COPY --from=client-build /root/client/build /root/public
+  COPY --from=client-build /root/client/build /root/api/public
 
   CMD ["bin/rails", "server"]
