@@ -23,7 +23,7 @@ export default function BookmarkModal (props) {
   }
 
   return (
-    <Modal open={displayState} onClose={dispatchSetBookmarkOffered} basic size='small'>
+    <Modal style={{top: "25%"}} open={displayState} onClose={dispatchSetBookmarkOffered} basic size='small'>
       <Header icon='archive' content='Pick up where you left off' />
       <Modal.Content>
         <p>

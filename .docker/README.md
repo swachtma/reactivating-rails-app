@@ -1,6 +1,6 @@
 # Creating the Production Swarm
 
-Notes on working with Docker in development and production environments when managing this project.
+Instruction for working with Docker in development and production environments when managing this project.
 
 ## Install Docker
 
@@ -9,7 +9,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 ```
 
-### Setting up a new swarm
+## Setting up a new swarm
 
 First, install the DO storage driver:
 
@@ -28,11 +28,11 @@ Volumes can automatically be created and attached to the droplet/node by calling
 
 ## Bringing the Swarm Online
 
-If you are creating a new swarm, you will need to activate swarm mode with `docker swarm init --advertise-addr <droplet public IP>`.
+If you are creating a new swarm, you need to activate swarm mode with `docker swarm init --advertise-addr <droplet public IP>`.
 
 ## Docker Secrets
 
-When recreating a new swarm you will need to execute the following command to create the needed Docker Secrets.  These values are stored in LastPass Secure Notes.
+When creating a new swarm, execute the following command to create the needed Docker Secrets.  Find these values in LastPass Secure Notes.
 
 ```
 echo -n "" | docker secret create pg_database -
@@ -49,22 +49,22 @@ echo -n "" | docker secret create jwt_secret -
 
 Creating new version of production docker images: `docker build -f .docker/Dockerfile --target prod -t registry.gitlab.com/swachtma/reactivating-rails-app:latest .`
 
-Push new container to registry: `docker push registry.gitlab.com/swachtma/reactivating-rails-app:latest`
+Push new container to the registry: `docker push registry.gitlab.com/swachtma/reactivating-rails-app:latest`
 
-When creating new images, update reactivating-rails:latest, and create a version image (reactivating-rails-app:1.x.x).
+When creating new images, update reactivating-rails:latest, and create a new versioned image (reactivating-rails-app:x.x.x).
 
 ## Running Containers in Dev
 
-Docker compose is setup to use the production Dockerfile locally to build the dev environement from a shared production Dockfile.  Start all development services with `docker-compose up` from the project's root directory.
+Docker-Compose is set up to use the production Dockerfile locally to build the dev environment from a shared production Dockfile.  Start all development services with `docker-compose up` from the project's root directory.
 
 ## Starting the Production Stack
 
-The stack can be brought online in production with the following commmands once the steps above are completed.  First, clone the latest project files: `git clone https://github.com/swachtma/reactivating-rails-app.git`.
+After completing all the steps above, the stack can be brought online in production with the following commands.  First, clone the latest project files: `git clone https://github.com/swachtma/reactivating-rails-app.git`.
 
 Then, create the stack; `docker stack deploy -c .docker/docker-compose.yml rr`
 
 ## Updating Book Markdown
 
-The script `api-entry.sh` is an an entrypoint for the dev-api container and the production container.  In production, the container will check for an updated master from the book's public GitHub repo.  The latest copy is cloned each time the production service starts, and Rake task `rr:clear_book` and `rr:load_book` are run to clear old content and reset indexes for relevant tables.
+The script `api-entry.sh` is an entry point for the dev-api container and the production container.  In production, the container checks for an updated master commit from the book's public GitHub repo.  Each time the production service starts, the container clones the latest book text and Rake tasks `rr:clear_book` and `rr:load_book` run to clear old content and reset indexes for relevant tables.
 
-In development this behavior happens only when an `api/lib/reactivating-rails` directory is not found locally.  This prevent users reading the book and following along in a local project from unexpectedly recieving an update to the book while mid-read.
+In development, this behavior happens only when an `api/lib/reactivating-rails` directory is missing locally.  This design prevents users who are reading the book and following along in a local project from unexpectedly receiving an update mid-read.
